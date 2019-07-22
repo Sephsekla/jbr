@@ -1,5 +1,5 @@
 {
-  "name": "JBR",
+  "name": "jbr",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,6 +17,7 @@
     "ifdef-loader": "^2.1.1",
     "jquery-touchswipe": "^1.6.19",
     "magnific-popup": "^1.1.0",
+    "normalize.css": "^8.0.1",
     "pxloader": "^1.1.2",
     "save": "^2.4.0",
     "scrollmagic": "^2.0.7"

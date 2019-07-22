@@ -1,0 +1,18 @@
+/*!
+Theme Name: JBR
+Theme URI: https://joebr.io/
+Author: Joe Bailey-Roberts
+Author URI: https://joebr.io
+Description: A bespoke theme built for my personal site
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: jbr
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import '~normalize.css/normalise.css';
