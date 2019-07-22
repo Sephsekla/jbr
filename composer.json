@@ -1,0 +1,13 @@
+{
+    "name": "sephsekla/jbr",
+    "description": "Custom theme for my website",
+    "type": "theme",
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "Joe Bailey-Roberts",
+            "email": "dev@joebr.io"
+        }
+    ],
+    "require": {}
+}
