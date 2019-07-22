@@ -26,7 +26,8 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sy' ); ?></a>
 
 	<header id="header-main" class="site-header">
-                    <nav>
+        <?php the_custom_logo() ?>
+                    <nav class="main-nav">
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',
@@ -34,6 +35,12 @@
 					) );
 					?>
                     </nav>
+
+                    <div class="nav-toggle-wrapper">
+                        <button class="toggle-nav">
+                            Menu
+                        </div>
+                    </div>
 
 		
 	</header><!-- #masthead -->
