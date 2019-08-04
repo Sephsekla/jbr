@@ -22,7 +22,7 @@
 
         border-bottom: 4px solid $jbr_blue;
         width: 80px;
-        transform: scalex(0.875);
+        transform: scalex(0.8);
         left: 0;
 
         &-1{
@@ -33,13 +33,13 @@
         &-2{
             top: 23px;
             transform-origin: left;
-            transform: translatex(5px) scalex(0.875);
+            transform: translatex(8px) scalex(0.8);
         }
 
         &-3{
             top: 23px;
             transform-origin: right;
-            transform: translatex(-5px) scalex(0.875);
+            transform: translatex(-8px) scalex(0.8);
 
         }
 
