@@ -79,24 +79,24 @@
 
     &:hover{
         &::before, &::after{
-            transform: scalex(0.9) translatey(-1px);
+            transform: scalex(0.6) translatey(-1px);
         }
 
         .inner{
             color: transparent;
 
             &::before{
-              transform: rotate(-45deg);
+              transform: translatex(-19px) rotate(-45deg);
             }
 
             &::after{
-                transform: rotate(45deg);
+                transform: translatex(-19px) rotate(45deg);
             }
            
         }
 
         .left{
-            transform: scaley(0);
+            transform: translatex(20px) scaley(0);
         }
     }
 }
