@@ -38,6 +38,7 @@
                 padding-bottom: 100%;
                 transition: 0.2s;
                 background-color: $jbr_blue;
+                border-bottom: 0;
 
                 @supports(clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0)){
                     clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0);
