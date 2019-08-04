@@ -13,6 +13,10 @@
     background: transparent;
     border: 0;
 
+    &:focus{
+        outline: none;
+    }
+
     span{
         transition: 0.2s;
     }
@@ -44,13 +48,14 @@
         }
 
         &-4{
-            top: 46px;
+            top: 45px;
             transform-origin: right;
         }
     }
 
     .inner{
         opacity: 0;
+        color: $jbr_blue;
     }
 
     &:hover{

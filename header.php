@@ -9,6 +9,8 @@
  * @package SY_Video
  */
 
+ use jbr\nav as nav;
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -21,39 +23,42 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open() ?>
+<?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sy' ); ?></a>
 
 	<header id="header-main" class="site-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col">
-        <?php the_custom_logo() ?>
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col">
+		<?php the_custom_logo(); ?>
 </div>
 <div class="col">
-                    <nav class="main-nav">
+					<nav class="main-nav">
 					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'walker'         => new nav\jbr_Nav_Menu(),
+						)
+					);
 					?>
-                    </nav>
+					</nav>
 
-                    <div class="nav-toggle-wrapper">
-                        <button class="toggle-nav">
+					<div class="nav-toggle-wrapper">
+						<button class="toggle-nav">
 							<span class="inner">Menu</span>
 							<span class="line line-1"></span>
 							<span class="line line-2"></span>
 							<span class="line line-3"></span>
 							<span class="line line-4"></span>
-                        </div>
-                    </div>
+						</div>
+					</div>
 
 
-                    </div>       
-                    </div>      
+					</div>       
+					</div>      
 		
 	</header><!-- #masthead -->
 
