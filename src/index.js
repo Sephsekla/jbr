@@ -1,5 +1,7 @@
 import './sass/style.scss';
 import Prism from 'prismjs';
+
+import Parallax from 'parallax-js';
  
 Prism.highlightAll();
 
@@ -12,3 +14,13 @@ $('.toggle-nav').click(function () {
 setTimeout(() => {
     Prism.highlightAll();
 }, 0);
+
+
+var scene = document.getElementById('parallax');
+/*var parallaxInstance = new Parallax(scene,{
+    limitX: 10,
+    limitY: 10,
+    scalarX: 2,
+    scalarY: 2,
+});
+*/
