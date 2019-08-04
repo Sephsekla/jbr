@@ -22,3 +22,12 @@ function custom_logo() {
 
 
 add_filter( 'get_custom_logo', __NAMESPACE__ . '\\custom_logo' );
+
+
+
+function body( $classes ) {
+    return array_merge( $classes, array( 'line-numbers' ) );
+};
+
+
+add_filter('body_class', __NAMESPACE__.'\\body');
