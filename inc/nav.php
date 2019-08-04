@@ -14,17 +14,20 @@
 
 class jbr_Nav_Menu extends \Walker_Nav_Menu {
 	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-		
 
 		ob_start();
 
-		echo '<a href="' . $item->url . '">';
+		echo '<li class="col-12 col-lg">';
 
-		\jbr\utilities\picture( get_post_thumbnail_id( $item->object_id ) );
+		echo '<a href="' . $item->url . '" style="background-image: url(' . get_the_post_thumbnail_url( $item->object_id, 'medium' ) . ')">';
+
+		\jbr\utilities\picture( get_post_thumbnail_id( $item->object_id ), 'medium' );
 
 		echo '<span>' . $item->title . '</span>';
 
 		echo '</a>';
+
+		echo '</li>';
 
 		$output .= ob_get_clean();
 

@@ -1,0 +1,35 @@
+@mixin picture-cover{
+
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	picture{
+		visibility: hidden;
+	}
+
+	@supports(object-fit: cover){
+		background-image: none !important;
+		position: relative;
+
+		picture{
+			visibility: visible;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		img{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			min-height: 100%;
+			min-width: 100%;
+			object-fit: cover;
+
+			transform: translateX(-50%) translatey(-50%);
+		}
+	}
+}

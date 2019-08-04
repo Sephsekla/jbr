@@ -34,6 +34,7 @@
 		<?php the_custom_logo(); ?>
 </div>
 <div class="col">
+	<div class="nav-overlay toggle-nav"></div>
 					<nav class="main-nav">
 					<?php
 					wp_nav_menu(
@@ -47,7 +48,7 @@
 					</nav>
 
 					<div class="nav-toggle-wrapper">
-						<button class="toggle-nav">
+						<button class="toggle-nav toggle-button">
 							<span class="inner">Menu</span>
 							<span class="line line-1"></span>
 							<span class="line line-2"></span>

@@ -26,10 +26,12 @@
     background-size: cover;
     background-position: center;
 
+    @include picture-cover;
+
     .inner{
 
     
-
+        position: relative;
     display: flex;
 
     justify-content: center;
