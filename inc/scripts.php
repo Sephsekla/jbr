@@ -17,6 +17,9 @@ function init() {
 
 
     wp_register_script('jbr-scripts', get_template_directory_uri() . '/dist/main.js', array('jquery'), filemtime( get_template_directory() . '/dist/main.js' ), true );
+
+    wp_enqueue_script('jbr-scripts');
+
 }
 
  add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\init');

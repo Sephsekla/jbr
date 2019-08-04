@@ -26,6 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sy' ); ?></a>
 
 	<header id="header-main" class="site-header">
+        <div class="container">
         <?php the_custom_logo() ?>
                     <nav class="main-nav">
 					<?php
@@ -42,6 +43,8 @@
                         </div>
                     </div>
 
+
+                    </div>             
 		
 	</header><!-- #masthead -->
 

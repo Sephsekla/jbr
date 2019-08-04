@@ -1,0 +1,29 @@
+.main-nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: none;
+
+
+
+
+    ul {
+        list-style: none;
+
+        @extend .row;
+
+        li {
+            @extend .col;
+
+        }
+
+        @media(min-width: 992px) {}
+    }
+}
+
+.nav-open {
+    .main-nav {
+        display: block;
+    }
+}
