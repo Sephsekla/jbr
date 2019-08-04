@@ -1,4 +1,6 @@
-import './sass/style.scss'
+import './sass/style.scss';
+import Prism from 'prismjs';
+
 
 $ = jQuery;
 
