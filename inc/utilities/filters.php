@@ -15,7 +15,7 @@ function custom_logo() {
 	$html = sprintf(
 		'<a href="%1$s" class="custom-logo-link" rel="home" itemprop="url">%2$s</a>',
 		esc_url( home_url( '/' ) ),
-		'<img src="' . assets\get_asset_path( 'logo.svg' ) . '" class="custom-logo" width="148" height="20">'
+		'<img src="' . assets\get_asset_path( 'logo.svg' ) . '" class="custom-logo"width="133" height="75">'
 	);
 	return $html;
 }
