@@ -27,6 +27,11 @@
            
 
             opacity: 0;
+            transform: translatey(-20%);
+
+            &:nth-child(2), &:nth-child(4){
+                transform: translatey(20%);
+            }
 
             
 
@@ -127,6 +132,7 @@
         ul li{
             opacity: 1;
              transition: 0.2s;
+             transform: none;
              
 
             &:nth-child(2){

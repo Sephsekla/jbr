@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * Template Name: Homepage
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -28,12 +28,11 @@ get_header();
 			 * If you want to override this in a child theme, then include a file
 			 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 			 */
-			if ( is_singular() ) {
-				get_template_part( 'template-parts/content', get_post_type() );
-			} else {
-				get_template_part( 'template-parts/content', 'archive' );
+            get_template_part( 'template-parts/content', get_post_type() );
+            
+            get_template_part( 'template-parts/home/section', 'latest' );
 
-			}
+
 		}
 
 			the_posts_navigation();
