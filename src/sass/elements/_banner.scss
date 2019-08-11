@@ -50,6 +50,8 @@
         font-size: 7rem;
         position: relative;
         z-index: 2;
+        color: white;
+       text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 
         &::before{
             content: attr(data-title);
@@ -60,11 +62,12 @@
             z-index: -1;
            // top: 50%;
             //left: 50%;
-            transform: scale(7);
+            transform: scale(6);
             background-size: 20%;
             background-repeat: no-repeat;
-            background-position: center 25%;
+            background-position: center 30%;
             background-attachment: fixed;
+            text-shadow: none;
         }
       
     }
