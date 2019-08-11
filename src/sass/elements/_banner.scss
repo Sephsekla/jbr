@@ -25,6 +25,7 @@
    
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 
     @include picture-cover;
 
@@ -38,18 +39,34 @@
     align-items: center;
     height: 30vw;
     text-align: center;
+    background-color: rgba($jbr_blue,0.4);
 
-    animation: show-banner 3s;
-    animation-fill-mode: both;
 
     h1{
         display: inline-block;
         background-size: cover;
-        color: transparent;
+        //color: transparent;
         background-clip: text;
         font-size: 7rem;
-        animation: show-title 3s;
-        animation-fill-mode: both;
+        position: relative;
+        z-index: 2;
+
+        &::before{
+            content: attr(data-title);
+            display: block;
+            color: transparent;
+            position: absolute;
+            background: inherit;
+            z-index: -1;
+           // top: 50%;
+            //left: 50%;
+            transform: scale(7);
+            background-size: 20%;
+            background-repeat: no-repeat;
+            background-position: center 25%;
+            background-attachment: fixed;
+        }
+      
     }
 
 }
