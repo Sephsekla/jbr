@@ -22,6 +22,12 @@ function init() {
 
 	wp_enqueue_script( 'jbr-scripts' );
 
+	wp_register_script( 'jbr-post', get_template_directory_uri() . '/dist/post.js', array(), filemtime( get_template_directory() . '/dist/post.js' ), true );
+
+	if ( is_single() && get_post_type() === 'post' ) {
+		wp_enqueue_script( 'jbr-post' );
+	}
+
 }
 
  add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\init' );
