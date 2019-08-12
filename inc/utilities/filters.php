@@ -26,8 +26,17 @@ add_filter( 'get_custom_logo', __NAMESPACE__ . '\\custom_logo' );
 
 
 function body( $classes ) {
-    return array_merge( $classes, array( 'line-numbers' ) );
+	return array_merge( $classes, array( 'line-numbers' ) );
 };
 
 
-add_filter('body_class', __NAMESPACE__.'\\body');
+add_filter( 'body_class', __NAMESPACE__ . '\\body' );
+
+function custom_form_submit( $html ) {
+	// return '123';
+	$btn     = '<button class="forminator-button forminator-button-submit">Send</button>';
+	$new_btn = '<button class="forminator-button forminator-button-submit more-link"><span class="left"></span><span class="inner">Send</span></button>';
+	return str_replace( $btn, $new_btn, $html );
+}
+
+add_filter( 'forminator_render_button_markup', __NAMESPACE__ . '\\custom_form_submit', 1000000 );
