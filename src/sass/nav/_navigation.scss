@@ -18,6 +18,8 @@
 
         @extend .row;
 
+        justify-content: center;
+
         @supports(clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0)){
             margin-left: 20px;
             margin-right: 20px;
@@ -86,7 +88,20 @@
                     font-size: 2rem;
                 
                 }
-            }
+
+                @media(min-width: 768px) {
+
+                  
+                            padding-bottom: 70%;
+                }
+
+                @media(min-width: 992px) {
+
+                  
+                    padding-bottom: 100%;
+        }
+
+    }
 
             &:hover{
                
@@ -111,14 +126,7 @@
 
         }
 
-        @media(min-width: 992px) {
-
-            li{
-                a{
-                    padding-bottom: 100%;
-                }
-            }
-        }
+      
     }
 }
 
