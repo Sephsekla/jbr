@@ -47,7 +47,10 @@
         background-size: cover;
         //color: transparent;
         background-clip: text;
+        font-size: 3rem;
+        @media(min-width: 768px){
         font-size: 7rem;
+        }
         position: relative;
         z-index: 2;
         color: white;
@@ -63,11 +66,18 @@
            // top: 50%;
             //left: 50%;
             transform: scale(3);
-            background-size: 35%;
+           
             background-repeat: no-repeat;
-            background-position: center 30%;
-            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+           
             text-shadow: none;
+
+            @media(min-width: 768px){
+                background-size: 35%;
+                background-position: center 30%;
+                background-attachment: fixed;
+                }
         }
       
     }
