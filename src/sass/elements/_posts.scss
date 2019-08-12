@@ -19,6 +19,13 @@ article{
 
     li{
         display: inline-block;
+        
+    }
+}
+
+.article-footer{
+    a{
+        color: $jbr_red;
     }
 }
 
@@ -76,7 +83,7 @@ article{
         }
 
         &-5:before{
-            background-image: url('./assets/angle-1.svg');
+            background-image: url('./assets/angle-4.svg');
             bottom: 50px;
          
             left: 50px;
