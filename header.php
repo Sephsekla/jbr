@@ -34,18 +34,7 @@
 		<?php the_custom_logo(); ?>
 </div>
 <div class="col">
-	<div class="nav-overlay toggle-nav"></div>
-					<nav class="main-nav">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							'walker'         => new nav\jbr_Nav_Menu(),
-						)
-					);
-					?>
-					</nav>
+	
 
 					<div class="nav-toggle-wrapper">
 						<button class="toggle-nav toggle-button">
@@ -62,5 +51,17 @@
 					</div>      
 		
 	</header><!-- #masthead -->
+	<div class="nav-overlay toggle-nav"></div>
+					<nav class="main-nav">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'walker'         => new nav\jbr_Nav_Menu(),
+						)
+					);
+					?>
+					</nav>
 
 	<div id="content" class="site-content">
