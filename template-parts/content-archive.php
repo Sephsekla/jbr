@@ -1,8 +1,8 @@
-<article class="<?php post_class(); ?>">
+<article <?php post_class(); ?>>
 	<div class="container">
 		
 			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			<p class="date"><?php echo get_the_date( 'jS F Y') ?></p>
+			<p class="date"><?php echo get_the_date( 'jS F Y' ); ?></p>
 			<?php
 			  the_excerpt();
 

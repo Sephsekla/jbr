@@ -17,7 +17,7 @@ class jbr_Nav_Menu extends \Walker_Nav_Menu {
 
 		ob_start();
 
-		echo '<li class="col-12 col-lg">';
+		echo '<li class="col-12 col-md-4 col-lg">';
 
 		echo '<a href="' . $item->url . '" style="background-image: url(' . get_the_post_thumbnail_url( $item->object_id, 'medium' ) . ')">';
 
