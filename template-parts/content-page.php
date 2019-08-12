@@ -1,9 +1,9 @@
-<article class="<?php post_class(); ?>">
+<article <?php post_class(); ?>>
 	<div class="container">
 		
-			  <?php
+				<?php
 				the_content();
 				?>
-         
+		 
 	</div>
 </article>
