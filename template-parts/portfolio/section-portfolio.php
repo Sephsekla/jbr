@@ -13,7 +13,7 @@ $portfolio_query = new WP_Query(
         $portfolio_query->the_post();
 
         get_template_part('template-parts/portfolio/portfolio', $i%2);
-       the_title();
+
         $i++;
     }
 }
