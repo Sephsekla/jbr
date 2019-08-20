@@ -1,51 +1,19 @@
-<?php 
+<?php
 
-use function jbr\assets\get_asset_path;
+$portfolio_query = new WP_Query(
+    [
+        'post_type' => 'portfolio',
+        'posts_per_page' => -1,
+    ]
+    );
 
-?>
+    if ($portfolio_query->have_posts()) {
+    $i = 0;
+    while ($portfolio_query->have_posts()) {
+        $portfolio_query->the_post();
 
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="mockups">
-                    <div class="mockup imac">
-                        <img src="<?php echo get_asset_path('mockups/iMac.svg') ?>"/>
-                        <div></div>
-                    </div>
-                    <div class="mockup macbook">
-                        <img src="<?php echo get_asset_path('mockups/Macbook.png') ?>"/>
-                        <div></div>
-                    </div>
-                    <div class="mockup s9">
-                        <img src="<?php echo get_asset_path('mockups/S9.png') ?>"/>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="mockups">
-                    <div class="mockup imac">
-                        <img src="<?php echo get_asset_path('mockups/iMac.png') ?>"/>
-                        <div></div>
-                    </div>
-                    <div class="mockup macbook">
-                        <img src="<?php echo get_asset_path('mockups/Macbook.svg') ?>"/>
-                        <div></div>
-                    </div>
-                    <div class="mockup s9">
-                        <img src="<?php echo get_asset_path('mockups/S9.svg') ?>"/>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        get_template_part('template-parts/portfolio/portfolio', $i%2);
+       the_title();
+        $i++;
+    }
+}
