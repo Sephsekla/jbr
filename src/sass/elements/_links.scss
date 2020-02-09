@@ -6,6 +6,9 @@ a{
     &:hover{
         border-bottom-color: $jbr_blue;
     }
+    &:visited{
+        border-bottom-color: $jbr_grey;
+    }
 }
 
 @import 'links/more-link';
