@@ -11,11 +11,11 @@
 
 @keyframes show-banner{
     from{
-        background-color: white;
+        background-color: $jbr_white;
     }
 
     to{
-       background-color: rgba(white,0.4);
+       background-color: rgba($jbr_white,0.4);
     }
 }
 
@@ -53,7 +53,7 @@
         }
         position: relative;
         z-index: 2;
-        color: white;
+        color: $jbr_white;
        text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 
         &::before{
