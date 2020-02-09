@@ -10,6 +10,15 @@ article{
     &:last-child{
         border-bottom: 0;
     }
+
+    h1, h3{
+        margin-bottom: 0;
+    }
+
+    .date{
+        margin-top: 0;
+        font-size: 0.8rem;
+    }
 }
 
 .post-categories{
