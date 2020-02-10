@@ -19,11 +19,7 @@ $title = get_the_title( $id );
 <section class="banner banner-home" style="background-image: url(<?php echo wp_get_attachment_image_url( $image_id, 'full' ); ?>)">
 <?php jbr\utilities\picture( $image_id, 'full' ); ?>
 <div class="screen" aria-hidden="true">
-	<pre><?php 
-	
-	echo htmlspecialchars(
-			'<div>test</div>'
-			) ?></pre>
+	<pre id="home-screen"> </pre>
 </div>
 <div class="inner">
 <div class="container-fluid">

@@ -100,9 +100,10 @@
         backface-visibility: hidden;
         transform-origin: top;
         transform-style: preserve-3d;
+        overflow: hidden;
 
         pre{
-            font-size: 1vw;
+            font-size: 0.7vw;
             padding: 0;
             color: white;
         }
