@@ -8,6 +8,16 @@
     }
 }
 
+@keyframes title-trans{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.5;
+    }
+}
+
+
 
 .banner{
    
@@ -89,10 +99,6 @@
 &-home{
 
     perspective: 1000px;
-
-    h1{
-        animation: none !important;
-    }
 
     .screen{
         position: absolute;
