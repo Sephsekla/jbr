@@ -86,4 +86,28 @@
 
 }
 
+&-home{
+
+    perspective: 1000px;
+
+    .screen{
+        position: absolute;
+        left: 28vw;
+        top: 5%;
+        width: 37%;
+        height: 14vw;
+        transform: rotatex(-52deg);
+        backface-visibility: hidden;
+        transform-origin: top;
+        transform-style: preserve-3d;
+
+        pre{
+            font-size: 1vw;
+            padding: 0;
+            color: white;
+        }
+
+    }
+}
+
 }
