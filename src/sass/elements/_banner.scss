@@ -1,24 +1,12 @@
 
-@keyframes show-title{
+@keyframes title-in{
     from{
-        color: transparent;
+        opacity: 0;
     }
-
     to{
-        color: rgba($jbr_teal,0.6);
+        opacity: 1;
     }
 }
-
-@keyframes show-banner{
-    from{
-        background-color: $jbr_white;
-    }
-
-    to{
-       background-color: rgba($jbr_white,0.4);
-    }
-}
-
 
 
 .banner{
@@ -48,6 +36,16 @@
         //color: transparent;
         background-clip: text;
         font-size: 3rem;
+
+        animation: title-in 2s;
+        animation-fill-mode: both;
+
+        span{
+            animation-delay: 1.5s;
+            animation: title-in 2s;
+            animation-fill-mode: both;
+        }
+       
         @media(min-width: 768px){
         font-size: 7rem;
         }
@@ -72,6 +70,10 @@
             background-position: center;
            
             text-shadow: none;
+
+           
+
+   
 
             @media(min-width: 768px){
                 background-size: 35%;
