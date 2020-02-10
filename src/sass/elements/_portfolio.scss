@@ -1,0 +1,98 @@
+.portfolio-item{
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .container{
+        border-bottom: 1px solid $jbr_grey;
+    }
+
+}
+.mockups{
+    position: relative;
+    height: 0;
+
+    padding-bottom: 70%;
+
+    margin-bottom: 30%
+}
+
+.mockup{
+    position: relative;
+
+    img{
+        display: block;
+    }
+
+    
+
+
+    .screen{
+        img{
+            height: auto;
+
+        }
+        position: absolute;
+        overflow: hidden;
+        background: black;
+        border: 1px solid $jbr_grey;
+
+        // Needs latest Compass, add '@import "compass"' to your scss
+// Permalink - use to edit and share this gradient:
+// https://colorzilla.com/gradient-editor/#000000+60,7f7f7f+100
+background-color: rgb(0,0,0); // Old browsers
+@include filter-gradient(#000000, #7f7f7f, horizontal); // IE6-9 fallback on horizontal gradient
+@include background-image(linear-gradient(to right bottom,  rgba(0,0,0,1) 80%,rgba(127,127,127,1) 100%));
+
+    }
+
+    &.imac{
+        div{
+            
+            left: 4.2%;
+            width: 91.6%;
+            top: 5%;
+            height: 62.75%;
+    
+        }
+
+        width: 80%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &.macbook{
+        div{
+            left: 11.5%;
+           width: 76.8%;
+           top: 5.9%;
+           height: 85%;
+
+
+        }
+
+        position: absolute;
+        width: 70%;
+
+        top: 80%;
+        right: 0%;
+    }
+
+    &.s9{
+        div{
+            left: 3%;
+           width: 94%;
+           top: 4.9%;
+           height: 91%;
+           border-radius: 0.8rem;
+
+
+        }
+
+        position: absolute;
+        width: 20%;
+        top: 60%;
+        left: -5%;
+    }
+}

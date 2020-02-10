@@ -19,6 +19,10 @@ get_header();
 
 		get_template_part( 'template-parts/shared/banner' );
 
+		if(is_archive()){
+			get_template_part('template-parts/shared/archive','intro');
+		}
+
 			/* Start the Loop */
 		while ( have_posts() ) {
 			the_post();
