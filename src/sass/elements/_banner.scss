@@ -90,6 +90,10 @@
 
     perspective: 1000px;
 
+    h1{
+        animation: none !important;
+    }
+
     .screen{
         position: absolute;
         left: 28vw;
