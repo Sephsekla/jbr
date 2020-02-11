@@ -54,6 +54,6 @@ window.addEventListener('beforeunload', function(event) {
     $('.loader').addClass("active");
   });
 
-  window.addEventListener('load', function(event) {
+  window.addEventListener('DOMContentLoaded', function(event) {
     $('.loader-2').removeClass("active");
   }); 

@@ -37,7 +37,7 @@
     display: none;
     @supports(clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0)){
         clip-path: polygon(100% 0%, 115% 100%, 100% 100%, 100% 0%);
-        transition: 0.2s;
+        transition: 0.6s;
         display: block;
         position: fixed;
         top: 0;
@@ -52,7 +52,7 @@
 
     &.active{
         @supports(clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0)){
-            clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0);
+            clip-path: polygon(-15% 0%, 0% 100%, 100% 100%, 100% 0);
 
             
         
