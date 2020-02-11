@@ -139,12 +139,26 @@
     left: 0;
     background-color: rgba(0,0,0,0.8);
     z-index: 90;
+
+    @supports(clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0)){
+        clip-path: polygon(0% 0%, 0% 100%, 0% 100%, -15% 0);
+        transition: 0.2s;
+        display: block;
+        
+    
+    }
 }
 
 .nav-open {
     overflow: hidden;
     .nav-overlay{
         display: block;
+
+        @supports(clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0)){
+            clip-path: polygon(0% 0%, 0% 100%, 115% 100%, 100% 0);
+            
+        
+        }
     }
     .main-nav {
         visibility: visible;
