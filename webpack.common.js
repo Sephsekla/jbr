@@ -59,7 +59,8 @@ module.exports = {
   entry: {
 
     main: './src/index.js',
-    post: './src/post.js'
+    post: './src/post.js',
+    home: './src/homepage.js'
 
   },
   plugins: [
