@@ -39,3 +39,14 @@ function init() {
  add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\init' );
 
 
+add_action('wp_head',function(){
+	?>
+	<noscript>
+		<style>
+			.loader, .loader-2{
+				display: none !important;
+			}
+		</style>
+	</noscript>
+	<?php
+});
