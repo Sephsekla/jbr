@@ -1,7 +1,7 @@
 
 
 .link-boxes{
-    background-color: $jbr_teal;
+    background-color: $jbr_blue;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -55,5 +55,9 @@
         background-color: rgba($jbr_white,0.8);
         font-weight: bold;
         font-family: $font_sans;
+        font-size: 2rem;
+        padding-left: 10%;
+        padding-right: 10%;
+
     }
 }
