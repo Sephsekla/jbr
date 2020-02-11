@@ -102,6 +102,7 @@
 
     .inner{
         min-height: 65vh;
+        min-height: 100vh;
 
         h1::before{
             background-position: center 50%;
@@ -114,7 +115,7 @@
     .screen{
         position: absolute;
         left: 28vw;
-        top: 15%;
+        top: 28%;
         width: 37%;
         height: 14vw;
         transform: rotatex(-52deg);
