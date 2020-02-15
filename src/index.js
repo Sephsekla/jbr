@@ -57,3 +57,8 @@ window.addEventListener('beforeunload', function(event) {
   window.addEventListener('DOMContentLoaded', function(event) {
     $('.loader-2').removeClass("active");
   }); 
+
+
+import { initHeaderScroll } from './js/scroll.js';
+
+initHeaderScroll();
