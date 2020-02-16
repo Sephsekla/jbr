@@ -18,7 +18,7 @@ let currentString;
 
 let options = {
   
-  typeSpeed: 30,
+  typeSpeed: 10,
   smartBackspace: true,
   shuffle: true,
   loop: false,
