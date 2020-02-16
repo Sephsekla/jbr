@@ -29,10 +29,19 @@ function init() {
 	}
 
 	wp_register_script( 'jbr-home', get_template_directory_uri() . '/dist/home.js', array(), filemtime( get_template_directory() . '/dist/home.js' ), true );
+	
 
 	if ( is_page_template('page-templates/template-home.php') ) {
 		wp_enqueue_script( 'jbr-home' );
 	}
+
+	wp_register_script( 'jbr-wid', get_template_directory_uri() . '/dist/wid.js', array(), filemtime( get_template_directory() . '/dist/wid.js' ), true );
+	
+
+	if ( is_page_template('page-templates/template-wid.php') ) {
+		wp_enqueue_script( 'jbr-wid' );
+	}
+
 
 }
 

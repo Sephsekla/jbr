@@ -2,6 +2,8 @@
     <div class="container">
         <div class="expertise">
             <?php 
+
+            $i = 0;
         
             if(have_rows('expertise')) {
                 while(have_rows('expertise')){
@@ -27,7 +29,7 @@
 
                 </div>
 
-                <div class="slideout">
+                <div class="slideout" id="expertise-<?php echo $i++ ?>">
                     <?php echo get_sub_field("content") ?>
                 </div>
 
@@ -38,5 +40,6 @@
             }
             ?>
         </div>
+        <div class="expertise-expansion"><span id="expand"></span></div>
     </div>
 </section>

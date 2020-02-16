@@ -60,7 +60,8 @@ module.exports = {
 
     main: './src/index.js',
     post: './src/post.js',
-    home: './src/homepage.js'
+    home: './src/homepage.js',
+    wid: './src/wid.js'
 
   },
   plugins: [

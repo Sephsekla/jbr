@@ -4,9 +4,12 @@
 
     .item{
         width: 100%;
+        position: relative;
+        transition: 0.1s;
 
-       
-
+       .linkbox{
+           transition: 0.1s;
+       }
 
         h3{
             font-size: 1.4rem;
@@ -20,20 +23,10 @@
             max-width: 25%;
 
             .slideout{
-                position: absolute;
-                width: 75%;
-                width: calc(75% + 50px);
-                left: 25%;
-                background: red;
-                color: white;
-                top: 0;
-                height: 100%;
-                margin-left: -50px;
-
-                padding-left: 50px;
-                
-            }
+                display: none;
         }
+
+    }
 
         
 
