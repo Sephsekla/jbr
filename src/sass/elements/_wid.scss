@@ -1,0 +1,41 @@
+.expertise{
+    @extend .row;
+    position: relative;
+
+    .item{
+        width: 100%;
+
+       
+
+
+        h3{
+            font-size: 1.4rem;
+        }
+
+        .overlay{
+            background: $jbr_teal;
+        }
+
+        @media(min-width: 992px){
+            max-width: 25%;
+
+            .slideout{
+                position: absolute;
+                width: 75%;
+                width: calc(75% + 50px);
+                left: 25%;
+                background: red;
+                color: white;
+                top: 0;
+                height: 100%;
+                margin-left: -50px;
+
+                padding-left: 50px;
+                
+            }
+        }
+
+        
+
+    }
+}
