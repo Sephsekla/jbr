@@ -34,6 +34,7 @@
                     </div>
 
                 </div>
+                <span class="arrow"></span>
 
                 <div class="slideout" id="expertise-<?php echo $i++ ?>">
                     <?php echo get_sub_field("content") ?>
