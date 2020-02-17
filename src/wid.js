@@ -13,17 +13,23 @@ const stringMap = typestrings.map( x => he.encode(x));
 
 $ = jQuery;
 
-let currentString;
+let currentString ='123';
 
 
 let options = {
   
-  typeSpeed: 10,
-  smartBackspace: true,
-  shuffle: true,
-  loop: false,
-  strings: [],
-  onReset: function(self) { self.strings[0] = currentString },
+  typeSpeed: 2,
+  smartBackspace: false,
+  shuffle: false,
+  backDelay: 0,
+  loop: true,
+  strings: ['123','456'],
+  preStringTyped: function(arrayPos, self) { self.strings[arrayPos] = currentString; },
+  onStringTyped: function(arrayPos, self){
+      console.log(self);
+      self.stop();
+  }
+
 
  
 };
@@ -39,16 +45,12 @@ $('.expertise .item').mouseenter(
         if(!typed){
             options.strings[0] = $(this).find('.slideout').text();
             typed = new Typed('#expand', options);
-            console.log('initial');
         }
         else{
-
+            typed.start();
             currentString = $(this).find('.slideout').text();
-            //typed.options.stringsElement = `#${$(this).find('.slideout').attr('id')}`;
-
-           // typed.options.strings = ['test'];
-
-        typed.reset(true);
+            
+ 
         }
 
        
