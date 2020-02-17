@@ -1,4 +1,4 @@
-<section>
+<section class="expertise-section">
     <div class="container">
         <div class="expertise">
             <?php 
@@ -11,6 +11,7 @@
                
 
                     $image = get_sub_field('image');
+                    $image_h = get_sub_field('image_hover');
                     ?>
 
             <div class="item">
@@ -20,6 +21,11 @@
                         style="background-image: url(<?php echo wp_get_attachment_image_url($image, 'full') ?>)">
 
                         <?php jbr\utilities\picture($image, 'full') ?>
+                    </div>
+
+                    <div class="image alt" style="background-image: url(<?php echo wp_get_attachment_image_url($image_h,'full') ?>)">
+
+                    <?php jbr\utilities\picture($image_h,'full') ?>
                     </div>
 
 

@@ -6,6 +6,7 @@
         width: 100%;
         position: relative;
         transition: 0.1s;
+        cursor: pointer;
 
        .linkbox{
            transition: 0.1s;
@@ -16,7 +17,7 @@
         }
 
         .overlay{
-            background: $jbr_teal;
+            //background: $jbr_teal;
         }
 
         @media(min-width: 992px){
@@ -31,4 +32,13 @@
         
 
     }
+
+    &-section{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.expertise-expansion{
+    margin-top: 50px;
 }
