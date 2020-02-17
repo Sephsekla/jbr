@@ -18,7 +18,7 @@ let currentString;
 
 let options = {
 
-    typeSpeed: 5,
+    typeSpeed: 1,
     smartBackspace: true,
     shuffle: false,
     loop: false,
@@ -37,7 +37,7 @@ let typed = false;
 
 
 
-$('.expertise .item').click(
+$('.expertise .item').mouseenter(
     function () {
 
         if (!$(this).find(".linkbox").hasClass("active")) {
@@ -46,8 +46,10 @@ $('.expertise .item').click(
             $(this).find(".linkbox").addClass("active");
             $('.expertise-expansion').slideDown();
 
-
-            if (!typed) {
+            if(true){
+                $('#expand').text($(this).find('.slideout').text());
+            }
+            else if (!typed) {
                 options.strings[0] = $(this).find('.slideout').text();
                 typed = new Typed('#expand', options);
                 console.log('initial');
