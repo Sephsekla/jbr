@@ -24,6 +24,8 @@ get_header();
 			
 			get_template_part( 'template-parts/wid/section', 'expertise' );
 
+			get_template_part( 'template-parts/wid/section', 'tech' );
+
 
 			/*
 			 * Include the Post-Type-specific template for the content.
