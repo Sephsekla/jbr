@@ -19,6 +19,10 @@
 
 body{
     background-color: $jbr_teal;
+
+    &.content-loaded{
+        background-color: $jbr_white;
+    }
 }
 
 .site{

@@ -1,12 +1,12 @@
 import './sass/style.scss';
 
 import Parallax from 'parallax-js';
- 
+
 
 $ = jQuery;
 
 $('.toggle-nav').click(function () {
-    $('body').toggleClass('nav-open');
+  $('body').toggleClass('nav-open');
 })
 
 
@@ -50,15 +50,18 @@ I too like to live dangerously.
 
 `);
 
-window.addEventListener('beforeunload', function(event) {
-    $('.loader').addClass("active");
-  });
+window.addEventListener('beforeunload', function (event) {
+  $('.loader').addClass("active");
+});
 
-  window.addEventListener('DOMContentLoaded', function(event) {
-    $('.loader-2').removeClass("active");
-  }); 
+window.addEventListener('DOMContentLoaded', function (event) {
+  $('.loader-2').removeClass("active");
+  $('body').addClass('content-loaded');
+});
 
 
-import { initHeaderScroll } from './js/scroll.js';
+import {
+  initHeaderScroll
+} from './js/scroll.js';
 
 initHeaderScroll();

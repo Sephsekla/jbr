@@ -1,4 +1,5 @@
 form{
+
     label{
         @extend .screen-reader-text;
     }
@@ -7,6 +8,8 @@ form{
         width: 100%;
         box-shadow: none;
         border: 2px solid $jbr_blue;
+        padding: 10px;
+
     }
 
     textarea{
@@ -14,4 +17,16 @@ form{
         max-width: 100%;
         height: 200px;
     }
+}
+
+.contact{
+    padding-top: 50px;
+}
+
+button{
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    color: $jbr_blue;
 }
