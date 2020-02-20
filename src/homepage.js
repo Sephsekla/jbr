@@ -56,7 +56,9 @@ $('section, div').mouseenter(
 
 
 import {
-    initHeaderScroll
+    initHeaderScroll, popInStagger
   } from './js/scroll.js';
   
   initHeaderScroll();
+
+  popInStagger('.link-wrapper','#links',200,0.8);

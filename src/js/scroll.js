@@ -19,18 +19,19 @@ let headerScroll = new ScrollMagic.Scene({
                     
 }
 
-function popInTech(){
+function popInStagger(items,trigger, duration=0, triggerPos=0.5){
 	let controller = new ScrollMagic.Controller();
 
-	let techIn = new TweenMax.staggerFrom('.tech-item',0.2,{
+	let techIn = new TweenMax.staggerFrom(items,0.2,{
 		autoAlpha: 0,
 		scale: 1.3
 	},0.1);
 
 	let techScroll = new ScrollMagic.Scene({
-		triggerElement: '#technologies',
-		duration: 300,
-		reverse: false
+		triggerElement: trigger,
+		duration: duration,
+		reverse: false,
+		triggerHook: triggerPos,
 	})
 	.setTween(techIn)
 	.addIndicators()
@@ -38,4 +39,4 @@ function popInTech(){
 
 }
 
-export { initHeaderScroll, popInTech };
+export { initHeaderScroll, popInStagger };
