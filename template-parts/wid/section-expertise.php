@@ -1,6 +1,6 @@
 <section class="expertise-section">
     <div class="container">
-        <div class="expertise">
+        <div class="expertise row">
             <?php 
 
             $i = 0;
@@ -13,7 +13,7 @@
                     $image = get_sub_field('image');
                     $image_h = get_sub_field('image_hover');
                     ?>
-
+            <div class="col-12 col-lg-3">
             <div class="item">
 
                 <div class="linkbox">
@@ -41,6 +41,7 @@
                 </div>
 
             </div>
+                </div>
 
                     <?php
                 }
