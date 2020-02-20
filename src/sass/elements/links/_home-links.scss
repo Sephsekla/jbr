@@ -17,6 +17,12 @@
     position: relative;
     margin-top: 50px;
 
+    @media(min-width: 768px){
+       &.offset-left{ margin-left: -15%; 
+        width: 115%;
+    }
+    }
+
     .image{
         padding-bottom: 80%;
         top: 0;
@@ -62,6 +68,20 @@
         font-size: 2rem;
         padding-left: 10%;
         padding-right: 10%;
+
+    }
+
+    &.archive-links{
+     
+    }
+
+    &.green .overlay{
+        background-color: rgba($jbr_teal,0.6);
+
+    }
+
+    &.transparent .overlay{
+        background-color: transparent;
 
     }
 }

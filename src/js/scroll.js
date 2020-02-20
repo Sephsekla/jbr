@@ -24,7 +24,7 @@ function popInStagger(items,trigger, duration=0, triggerPos=0.5){
 
 	let techIn = new TweenMax.staggerFrom(items,0.2,{
 		autoAlpha: 0,
-		scale: 1.3
+		scale: 2
 	},0.1);
 
 	let techScroll = new ScrollMagic.Scene({

@@ -52,7 +52,6 @@ $found_posts = $wp_query->found_posts;
 			}
 		}
 
-		echo 'BREAK HERE';
 
 		
 
