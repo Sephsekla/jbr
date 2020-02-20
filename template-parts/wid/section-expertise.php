@@ -1,3 +1,9 @@
+<?php
+
+use function jbr\utilities\construct_linkbox;
+
+?>
+
 <section class="expertise-section">
     <div class="container">
         <div class="expertise row">
@@ -16,24 +22,10 @@
             <div class="col-12 col-lg-3">
             <div class="item">
 
-                <div class="linkbox">
-                    <div class="image"
-                        style="background-image: url(<?php echo wp_get_attachment_image_url($image, 'full') ?>)">
+          
 
-                        <?php jbr\utilities\picture($image, 'full') ?>
-                    </div>
+                    <?php construct_linkbox('',$image,$image_h,'<h3>'.get_sub_field('title').'</h3>'); ?>
 
-                    <div class="image alt" style="background-image: url(<?php echo wp_get_attachment_image_url($image_h,'full') ?>)">
-
-                    <?php jbr\utilities\picture($image_h,'full') ?>
-                    </div>
-
-
-                    <div class="overlay">
-                        <h3><?php echo get_sub_field('title') ?></h3>
-                    </div>
-
-                </div>
                 <span class="arrow"></span>
 
                 <div class="slideout container" id="expertise-<?php echo $i++ ?>">
