@@ -36,7 +36,7 @@
                 </div>
                 <span class="arrow"></span>
 
-                <div class="slideout" id="expertise-<?php echo $i++ ?>">
+                <div class="slideout container" id="expertise-<?php echo $i++ ?>">
                     <?php echo get_sub_field("content") ?>
                 </div>
 
@@ -47,6 +47,6 @@
             }
             ?>
         </div>
-        <div class="expertise-expansion"><span id="expand"></span></div>
+        <div class="expansion-wrapper"><div class="expertise-expansion"><span id="expand"></span></div></div>
     </div>
 </section>

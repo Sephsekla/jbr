@@ -13,7 +13,10 @@
        .linkbox{
            transition: 0.1s;
 
+           @media(min-width: 992px){
+
            &.active+span{
+               
             content: '';
             display: block;
             position: absolute;
@@ -24,6 +27,8 @@
             border-bottom: 10px solid $jbr_blue;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
+
+           }
         }
        }
 
@@ -60,6 +65,13 @@
     color: $jbr_white;
     padding: 50px;
     display: none;
+}
+
+.expansion-wrapper{
+    display: none;
+    @media(min-width: 992px){
+        display: block;
+    }
 }
 
 @import 'logos';
