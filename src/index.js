@@ -59,9 +59,3 @@ window.addEventListener('DOMContentLoaded', function (event) {
   $('body').addClass('content-loaded');
 });
 
-
-import {
-  initHeaderScroll
-} from './js/scroll.js';
-
-initHeaderScroll();

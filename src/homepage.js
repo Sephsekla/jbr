@@ -53,3 +53,10 @@ $('section, div').mouseenter(
 
     }
 );
+
+
+import {
+    initHeaderScroll
+  } from './js/scroll.js';
+  
+  initHeaderScroll();

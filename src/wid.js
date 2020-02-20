@@ -1,6 +1,7 @@
 // Can also be included with a regular script tag
 import Typed from 'typed.js';
 import he from 'he';
+import { popInTech } from './js/scroll';
 
 /*const typestrings = [
     '<section>Hola</section>',
@@ -70,3 +71,5 @@ $('.expertise .item').mouseenter(
 
 
 );
+
+popInTech();

@@ -3,7 +3,7 @@
 ?>
 
 
-<section class="technologies">
+<section class="technologies" id="technologies">
     <div class="container">
         <h2>Technology</h2>
         <?php if(have_rows('technologies')){
@@ -11,7 +11,7 @@
             while(have_rows('technologies')){ // Loop through technologies
                 the_row();
 
-                ?> <div class="col-6 col-sm-6 col-lg-4 col-xl-3"> 
+                ?> <div class="col-6 col-sm-6 col-lg-4 col-xl-3 tech-item"> 
                     <div class="tech-icon">
                     
                         <img src="<?php echo get_path('logos/'.get_sub_field("svg").'.svg') ?>"/>
