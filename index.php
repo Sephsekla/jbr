@@ -31,6 +31,7 @@ $found_posts = $wp_query->found_posts;
 				get_template_part( 'template-parts/content', get_post_type() );
 			}
 		}
+		else{
 
 			/* Start the Loop */
 		$i = 0;
@@ -77,6 +78,8 @@ $found_posts = $wp_query->found_posts;
 		?></div></div></section> <?php
 
 	}
+
+}
 
 
 
