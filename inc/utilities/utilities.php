@@ -28,3 +28,28 @@ function get_years() {
 }
 
  add_shortcode( 'get_years', __NAMESPACE__ . '\\get_years' );
+
+ function construct_linkbox($url,$img_1,$img_2,$text){
+
+	?>
+
+	<a href="<?php echo $url ?>" class="linkbox">
+	<div class="image" style="background-image: url(<?php echo wp_get_attachment_image_url($img_1,'full') ?>)">
+
+	<?php picture($img_1,'full') ?>
+	</div>
+
+	<div class="image alt" style="background-image: url(<?php echo wp_get_attachment_image_url($img_2,'full') ?>)">
+
+<?php picture($img_2,'full') ?>
+</div>
+
+	<div class="overlay">
+		<?php echo $text ?>
+	</div>   
+
+	</a>
+
+	<?php
+
+ }

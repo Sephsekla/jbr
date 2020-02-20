@@ -11,7 +11,7 @@
             while($latest_query->have_posts()){
                 $latest_query->the_post();
 
-                get_template_part('template-parts/content', 'archive');
+                get_template_part('template-parts/content', 'latest');
             }
         }
 
