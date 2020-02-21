@@ -63,6 +63,7 @@ module.exports = {
     home: './src/homepage.js',
     wid: './src/wid.js',
     about: './src/about.js',
+    404: './src/404.js',
 
   },
   plugins: [

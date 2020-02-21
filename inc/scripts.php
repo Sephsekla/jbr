@@ -49,7 +49,11 @@ function init() {
 		wp_enqueue_script( 'jbr-about' );
 	}
 
+	wp_register_script( 'jbr-404', get_template_directory_uri() . '/dist/404.js', array(), filemtime( get_template_directory() . '/dist/404.js' ), true );
 
+	if ( is_404() ) {
+		wp_enqueue_script( 'jbr-404' );
+	}
 
 }
 
