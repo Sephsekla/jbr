@@ -15,7 +15,42 @@ $i: 1;
 }
 
 @mixin create_4($x,$y){
-    
+
+            @include cc($x,8);
+
+            @include cc($x - 4,16);
+            @include cc($x,16);
+
+            @include cc($x - 8,24);
+            @include cc($x - 4,24);
+            @include cc($x,24);
+
+            @include cc($x - 12,32);
+            @include cc($x - 8,32);
+            @include cc($x,32);
+
+            @include cc($x - 16,40);
+            @include cc($x - 12,40);
+            @include cc($x,40);
+
+            @include cc($x - 16,48);
+           // @include cc(14,9,48);
+            @include cc($x,48);
+
+            @include cc($x - 20,56);
+            @include cc($x - 16,56);
+            @include cc($x - 12,56);
+            @include cc($x - 8,56);
+            @include cc($x - 4,56);
+            @include cc($x,56);
+            @include cc($x + 4,56);
+            @include cc($x + 8,56);
+
+            @include cc($x,64);
+
+            @include cc($x,72);
+
+            @include cc($x,80);
 }
 
 
@@ -41,43 +76,11 @@ $i: 1;
 
        // clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0);
         
-            @include cc(21,8);
+            
 
-            @include cc(17,16);
-            @include cc(21,16);
+        @include create_4(21,8);
 
-            @include cc(13,24);
-            @include cc(17,24);
-            @include cc(21,24);
-
-            @include cc(9,32);
-            @include cc(13,32);
-            @include cc(21,32);
-
-            @include cc(5,40);
-            @include cc(9,40);
-            @include cc(21,40);
-
-            @include cc(5,48);
-           // @include cc(14,9,48);
-            @include cc(21,48);
-
-            @include cc(1,56);
-            @include cc(5,56);
-            @include cc(9,56);
-            @include cc(13,56);
-            @include cc(17,56);
-            @include cc(21,56);
-            @include cc(25,56);
-            @include cc(29,56);
-
-            @include cc(21,64);
-
-            @include cc(21,72);
-
-            @include cc(21,80);
-
-
+        @include create_4(83,8);
 
 
         
