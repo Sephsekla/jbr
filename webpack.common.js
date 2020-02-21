@@ -61,7 +61,8 @@ module.exports = {
     main: './src/index.js',
     post: './src/post.js',
     home: './src/homepage.js',
-    wid: './src/wid.js'
+    wid: './src/wid.js',
+    about: './src/about.js',
 
   },
   plugins: [

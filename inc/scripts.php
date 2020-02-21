@@ -42,6 +42,14 @@ function init() {
 		wp_enqueue_script( 'jbr-wid' );
 	}
 
+	wp_register_script( 'jbr-about', get_template_directory_uri() . '/dist/about.js', array(), filemtime( get_template_directory() . '/dist/about.js' ), true );
+	
+
+	if ( is_page_template('page-templates/template-about.php') ) {
+		wp_enqueue_script( 'jbr-about' );
+	}
+
+
 
 }
 
