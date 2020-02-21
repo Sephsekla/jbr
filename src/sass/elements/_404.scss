@@ -1,0 +1,85 @@
+@mixin coord($x,$y){
+    left: $x * 1%;
+    top: $y * 1%;
+}
+
+$i: 1;
+
+@mixin cc($x,$y){
+    $i: $i + 1 !global;
+    &:nth-child(#{$i}){
+        @include coord($x,$y);
+    }
+
+    
+}
+
+@mixin create_4($x,$y){
+    
+}
+
+
+.wrapper-404{
+    height: 0;
+    width: 100%;
+    padding-bottom: 50%;
+    background-color: red;
+    position: relative;
+    background-image: url('http://jbr.local/wp-content/uploads/2020/02/404-1.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: none;
+    
+    span{
+        display: block;
+        width: 4%;
+        height: 0;
+        padding-bottom: 4%;
+        background: white;
+        position: absolute;
+        border: 1px solid blue;
+
+       // clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0);
+        
+            @include cc(21,8);
+
+            @include cc(17,16);
+            @include cc(21,16);
+
+            @include cc(13,24);
+            @include cc(17,24);
+            @include cc(21,24);
+
+            @include cc(9,32);
+            @include cc(13,32);
+            @include cc(21,32);
+
+            @include cc(5,40);
+            @include cc(9,40);
+            @include cc(21,40);
+
+            @include cc(5,48);
+           // @include cc(14,9,48);
+            @include cc(21,48);
+
+            @include cc(1,56);
+            @include cc(5,56);
+            @include cc(9,56);
+            @include cc(13,56);
+            @include cc(17,56);
+            @include cc(21,56);
+            @include cc(25,56);
+            @include cc(29,56);
+
+            @include cc(21,64);
+
+            @include cc(21,72);
+
+            @include cc(21,80);
+
+
+
+
+        
+    }
+}
