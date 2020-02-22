@@ -52,4 +52,4 @@ import {
   
   initHeaderScroll();
 
-  popInStagger('.link-wrapper','#links',200,0.8);
+  //popInStagger('.link-wrapper','#links',200,0.8);
