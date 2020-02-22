@@ -19,7 +19,7 @@ use function jbr\utilities\construct_linkbox;
                     $image = get_sub_field('image');
                     $image_h = get_sub_field('image_hover');
                     ?>
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-md-6 col-lg-3">
             <div class="item">
 
           

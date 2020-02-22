@@ -1,6 +1,6 @@
 // Can also be included with a regular script tag
 import Typed from 'typed.js';
-import he from 'he';å
+import he from 'he';
 
 $ = jQuery;
 
