@@ -1,6 +1,6 @@
 import ScrollMagic from 'scrollmagic';
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-import "imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js";
+//import "imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js";
 import TweenMax from 'gsap';
 
 $ = jQuery;
@@ -34,7 +34,7 @@ function popInStagger(items,trigger, duration=0, triggerPos=0.5){
 		triggerHook: triggerPos,
 	})
 	.setTween(techIn)
-	.addIndicators()
+	//.addIndicators()
 	.addTo(controller);
 
 }

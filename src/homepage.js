@@ -1,15 +1,6 @@
 // Can also be included with a regular script tag
 import Typed from 'typed.js';
-import he from 'he';
-
-/*const typestrings = [
-    '<section>Hola</section>',
-    '<section>Iawn</section>'
-    
-];
-
-const stringMap = typestrings.map( x => he.encode(x));
-*/
+import he from 'he';å
 
 $ = jQuery;
 
