@@ -45,34 +45,8 @@
             color: $jbr_white;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 
-            &::before {
-                content: attr(data-title);
-                display: block;
-                color: transparent;
-                position: absolute;
-                background: inherit;
-                z-index: -1;
-                // top: 50%;
-                //left: 50%;
-                transform: scale(3);
+            @import 'banner/largetext';
 
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-
-                text-shadow: none;
-                background-repeat: repeat-x;
-
-
-
-
-
-                @media(min-width: 1024px) {
-                    background-size: 35vw;
-                    background-position: center 25%;
-                    background-attachment: fixed;
-                }
-            }
 
         }
 
