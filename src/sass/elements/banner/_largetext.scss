@@ -1,4 +1,7 @@
 &::before {
+
+   
+
     content: attr(data-title);
     display: block;
     color: transparent;
@@ -13,6 +16,14 @@
 
     text-shadow: none;
     background-repeat: repeat-x;
+
+    @supports not(background-clip: text){
+        color: white;
+        opacity: 0.2;
+        background: none !important;
+    }
+
+    
 
 
     @media(min-width: 1024px) {
