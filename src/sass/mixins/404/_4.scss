@@ -1,0 +1,38 @@
+@mixin create_4($x, $y) {
+
+    @include cc($x, $y);
+
+    @include cc($x - 4, $y + 8);
+    @include cc($x, $y + 8);
+
+    @include cc($x - 8, $y + 16);
+    @include cc($x - 4, $y + 16);
+    @include cc($x, $y + 16);
+
+    @include cc($x - 12, $y + 24);
+    @include cc($x - 8, $y + 24);
+    @include cc($x, $y + 24);
+
+    @include cc($x - 16, $y + 32);
+    @include cc($x - 12, $y + 32);
+    @include cc($x, $y + 32);
+
+    @include cc($x - 16, $y + 40);
+    // @include cc(14,9,48);
+    @include cc($x, $y + 40);
+
+    @include cc($x - 20, $y + 48);
+    @include cc($x - 16, $y + 48);
+    @include cc($x - 12, $y + 48);
+    @include cc($x - 8, $y + 48);
+    @include cc($x - 4, $y + 48);
+    @include cc($x, $y + 48);
+    @include cc($x + 4, $y + 48);
+    @include cc($x + 8, $y + 48);
+
+    @include cc($x, $y + 56);
+
+    @include cc($x, $y + 64);
+
+    @include cc($x, $y + 72);
+}
