@@ -18,7 +18,7 @@
         content: "";
         display: block;
         border-bottom: 4px solid $jbr_blue;
-        top: 24px;
+        top: 50%;
         left: 0;
         width: 100%;
         transition: inherit;
@@ -27,11 +27,11 @@
 
     &::before {
 
-        transform: translatey(-25px);
+        transform: translatey(-28px);
     }
 
     &::after {
-        transform: translatey(25px);
+        transform: translatey(22px);
 
     }
 
@@ -43,6 +43,7 @@
         height: 50px;
         left: 0;
         transition: inherit;
+        top: 0;
 
 
     }
