@@ -47,6 +47,11 @@
 
             @import 'banner/largetext';
 
+            @supports not(background-clip: text){
+                color: white;
+                background: none !important;
+            }
+
 
         }
 
