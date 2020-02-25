@@ -1,150 +1,83 @@
 
-@keyframes title-in{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
+.banner {
 
-@keyframes title-trans{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 0.5;
-    }
-}
-
-
-
-.banner{
-   
     background-size: cover;
     background-position: center;
     overflow: hidden;
 
     @include picture-cover;
 
-    .inner{
+    .inner {
 
-    
+
         position: relative;
-    display: flex;
+        display: flex;
 
-    justify-content: center;
-    align-items: center;
-    height: 30vw;
-    text-align: center;
-    background-color: rgba($jbr_teal,0.6);
+        justify-content: center;
+        align-items: center;
+        height: 30vw;
+        text-align: center;
+        background-color: rgba($jbr_teal, 0.6);
 
 
-    h1{
-        display: inline-block;
-        background-size: cover;
-        //color: transparent;
-        background-clip: text;
-        font-size: 3rem;
+        h1 {
+            display: inline-block;
+            background-size: cover;
+            //color: transparent;
+            background-clip: text;
+            font-size: 3rem;
 
-        animation: title-in 2s;
-        animation-fill-mode: both;
-
-        span{
-            animation-delay: 1.5s;
             animation: title-in 2s;
             animation-fill-mode: both;
-        }
-       
-        @media(min-width: 768px){
-        font-size: 7rem;
-        }
-        position: relative;
-        z-index: 2;
-        color: $jbr_white;
-       text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 
-        &::before{
-            content: attr(data-title);
-            display: block;
-            color: transparent;
-            position: absolute;
-            background: inherit;
-            z-index: -1;
-           // top: 50%;
-            //left: 50%;
-            transform: scale(3);
-           
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-           
-            text-shadow: none;
-            background-repeat: repeat-x;
-
-           
-
-   
-
-            @media(min-width: 1024px){
-                background-size: 35vw;
-                background-position: center 25%;
-                background-attachment: fixed;
-                }
-        }
-      
-    }
-
-}
-
-&-home{
-
-    perspective: 1000px;
-
-    .inner{
-        min-height: 65vh;
-        min-height: 100vh;
-        flex-direction: column;
-
-        h1::before{
-            background-position: center 50%;
-            opacity: 0.7;
-
-            @supports(filter: opacity(0.7)){
-                opacity: 1;
-                filter: opacity(0.7);
+            span {
+                animation-delay: 1.5s;
+                animation: title-in 2s;
+                animation-fill-mode: both;
             }
-        }
 
-        .banner-content{
-            text-align: left;
+            @media(min-width: 768px) {
+                font-size: 7rem;
+            }
+
+            position: relative;
+            z-index: 2;
             color: $jbr_white;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-            font-size: 1.6rem;
+
+            &::before {
+                content: attr(data-title);
+                display: block;
+                color: transparent;
+                position: absolute;
+                background: inherit;
+                z-index: -1;
+                // top: 50%;
+                //left: 50%;
+                transform: scale(3);
+
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+                text-shadow: none;
+                background-repeat: repeat-x;
+
+
+
+
+
+                @media(min-width: 1024px) {
+                    background-size: 35vw;
+                    background-position: center 25%;
+                    background-attachment: fixed;
+                }
+            }
+
         }
-    
+
     }
 
-    
-    .screen{
-        position: absolute;
-        left: 28vw;
-        top: 28%;
-        width: 37%;
-        height: 14vw;
-        transform: rotatex(-52deg);
-        backface-visibility: hidden;
-        transform-origin: top;
-        transform-style: preserve-3d;
-        overflow: hidden;
-
-        pre{
-            font-size: 0.7vw;
-            padding: 0;
-            color: white;
-        }
-
-    }
-}
+    @import 'banner/home';
 
 }

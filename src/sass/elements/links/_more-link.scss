@@ -1,4 +1,4 @@
-.more-link {
+.more-link { // Fancy link button that turns into an arrow (I know right?)
     border-bottom: 0;
     display: inline-flex;
     justify-content: center;
@@ -26,8 +26,8 @@
     }
 
     &::before {
-       
-       transform: translatey(-25px);
+
+        transform: translatey(-25px);
     }
 
     &::after {
@@ -36,22 +36,23 @@
     }
 
     .left {
-            position: absolute;
-            content: "";
-            display: block;
-            border-right: 4px solid $jbr_blue;
-            height: 50px;
-            left: 0;
-            transition: inherit;
+        position: absolute;
+        content: "";
+        display: block;
+        border-right: 4px solid $jbr_blue;
+        height: 50px;
+        left: 0;
+        transition: inherit;
 
 
-        }
+    }
 
 
-    
+
 
     .inner {
         transition: inherit;
+
         &::before,
         &::after {
             position: absolute;
@@ -79,25 +80,27 @@
     }
 
 
-    &:hover{
-        &::before, &::after{
+    &:hover {
+
+        &::before,
+        &::after {
             transform: scalex(0.6) translatey(-1px);
         }
 
-        .inner{
+        .inner {
             color: transparent;
 
-            &::before{
-              transform: translatex(-19px) rotate(-45deg);
+            &::before {
+                transform: translatex(-19px) rotate(-45deg);
             }
 
-            &::after{
+            &::after {
                 transform: translatex(-19px) rotate(45deg);
             }
-           
+
         }
 
-        .left{
+        .left {
             transform: translatex(20px) scaley(0);
         }
     }

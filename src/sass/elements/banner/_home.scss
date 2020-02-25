@@ -1,0 +1,49 @@
+&-home {
+
+    perspective: 1000px;
+
+    .inner {
+        min-height: 65vh;
+        min-height: 100vh;
+        flex-direction: column;
+
+        h1::before {
+            background-position: center 50%;
+            opacity: 0.7;
+
+            @supports(filter: opacity(0.7)) {
+                opacity: 1;
+                filter: opacity(0.7);
+            }
+        }
+
+        .banner-content {
+            text-align: left;
+            color: $jbr_white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            font-size: 1.6rem;
+        }
+
+    }
+
+
+    .screen {
+        position: absolute;
+        left: 28vw;
+        top: 28%;
+        width: 37%;
+        height: 14vw;
+        transform: rotatex(-52deg);
+        backface-visibility: hidden;
+        transform-origin: top;
+        transform-style: preserve-3d;
+        overflow: hidden;
+
+        pre {
+            font-size: 0.7vw;
+            padding: 0;
+            color: white;
+        }
+
+    }
+}

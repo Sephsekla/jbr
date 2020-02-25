@@ -27,8 +27,8 @@
 .loader{
     pointer-events: none;
     display: none;
-    @supports(clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0)){
-        clip-path: polygon(0% 0%, 0% 100%, 0% 100%, -15% 0);
+    @supports(clip-path: $clip-85){
+        clip-path: $clip-collapsed;
         transition: 0.2s;
         display: block;
         position: fixed;
@@ -43,8 +43,8 @@
     }
 
     &.active{
-        @supports(clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0)){
-            clip-path: polygon(0% 0%, 0% 100%, 115% 100%, 100% 0);
+        @supports(clip-path: $clip-85){
+            clip-path: $clip-expanded;
             
         
         }
@@ -53,7 +53,7 @@
     &-2{
         pointer-events: none;
     display: none;
-    @supports(clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0)){
+    @supports(clip-path: $clip-85){
         clip-path: polygon(100% 0%, 115% 100%, 100% 100%, 100% 0%);
         transition: 0.6s;
         display: block;
@@ -69,7 +69,7 @@
     }
 
     &.active{
-        @supports(clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0)){
+        @supports(clip-path: $clip-85){
             clip-path: polygon(-15% 0%, 0% 100%, 100% 100%, 100% 0);
 
             
