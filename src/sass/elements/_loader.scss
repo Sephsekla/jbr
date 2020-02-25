@@ -1,0 +1,58 @@
+.loader {
+    pointer-events: none;
+    display: none;
+
+    @supports(clip-path: $clip-85) {
+        clip-path: $clip-collapsed;
+        transition: 0.2s;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $jbr_teal;
+        z-index: 100;
+
+
+    }
+
+    &.active {
+        @supports(clip-path: $clip-85) {
+            clip-path: $clip-expanded;
+
+
+        }
+    }
+
+    &-2 {
+        pointer-events: none;
+        display: none;
+
+        @supports(clip-path: $clip-85) {
+            clip-path: $clip-collapsed-r;
+            transition: 0.6s;
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $jbr_teal;
+            z-index: 100;
+
+
+        }
+
+        &.active {
+            @supports(clip-path: $clip-85) {
+                clip-path: $clip-expanded-r
+
+
+
+            }
+        }
+
+
+    }
+}

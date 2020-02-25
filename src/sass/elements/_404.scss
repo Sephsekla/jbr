@@ -1,93 +1,3 @@
-@mixin coord($x, $y) {
-    left: $x * 1%;
-    top: $y * 1%;
-}
-
-$i: 1;
-
-@mixin cc($x, $y) {
-    &:nth-child(#{$i})::after {
-        @include coord($x, $y);
-    }
-
-    $i: $i+1 !global;
-
-
-
-}
-
-@mixin create_4($x, $y) {
-
-    @include cc($x, $y);
-
-    @include cc($x - 4, $y + 8);
-    @include cc($x, $y + 8);
-
-    @include cc($x - 8, $y + 16);
-    @include cc($x - 4, $y + 16);
-    @include cc($x, $y + 16);
-
-    @include cc($x - 12, $y + 24);
-    @include cc($x - 8, $y + 24);
-    @include cc($x, $y + 24);
-
-    @include cc($x - 16, $y + 32);
-    @include cc($x - 12, $y + 32);
-    @include cc($x, $y + 32);
-
-    @include cc($x - 16, $y + 40);
-    // @include cc(14,9,48);
-    @include cc($x, $y + 40);
-
-    @include cc($x - 20, $y + 48);
-    @include cc($x - 16, $y + 48);
-    @include cc($x - 12, $y + 48);
-    @include cc($x - 8, $y + 48);
-    @include cc($x - 4, $y + 48);
-    @include cc($x, $y + 48);
-    @include cc($x + 4, $y + 48);
-    @include cc($x + 8, $y + 48);
-
-    @include cc($x, $y + 56);
-
-    @include cc($x, $y + 64);
-
-    @include cc($x, $y + 72);
-}
-
-@mixin create_0($x, $y) {
-
-    @include cc($x, $y);
-    @include cc($x + 4, $y);
-
-    @include cc($x - 4, $y + 8);
-    @include cc($x + 8, $y + 8);
-
-    @include cc($x - 8, $y + 16);
-    @include cc($x + 12, $y + 16);
-
-    @include cc($x - 8, $y + 24);
-    @include cc($x + 12, $y + 24);
-
-    @include cc($x - 8, $y + 32);
-    @include cc($x + 12, $y + 32);
-
-    @include cc($x - 8, $y + 40);
-    @include cc($x + 12, $y + 40);
-
-    @include cc($x - 8, $y + 48);
-    @include cc($x + 12, $y + 48);
-
-    @include cc($x - 8, $y + 56);
-    @include cc($x + 12, $y + 56);
-
-    @include cc($x - 4, $y + 64);
-    @include cc($x + 8, $y + 64);
-
-    @include cc($x, $y + 72);
-    @include cc($x + 4, $y + 72);
-}
-
 
 .wrapper-404 {
     height: 0;
@@ -115,7 +25,7 @@ $i: 1;
             padding-bottom: 4%;
             background: $jbr_blue;
             position: absolute;
-            clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0);
+            clip-path: $clip-85;
 
         }
 

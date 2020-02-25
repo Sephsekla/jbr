@@ -11,7 +11,7 @@
     display: block;
     border-bottom: 0;
     padding-bottom: 80%;
-    clip-path: polygon(0% 0%, 15% 100%, 100% 100%, 85% 0);
+    clip-path: $clip-85;
     color: $jbr_blue;
     text-align: center;
     position: relative;
@@ -86,7 +86,6 @@
     }
 
     &.margin-b{
-        //margin-top: 0;
         margin-bottom: 50px;
     }
 }

@@ -1,51 +1,13 @@
 import './sass/style.scss';
-
-
-$ = jQuery;
-
-$('.toggle-nav').click(function () {
-  $('body').toggleClass('nav-open');
-})
+import createEasterEgg from './js/easteregg';
+import initNav from './js/nav';
+import { loadWipe, unloadWipe } from './js/preloader';
 
 
 
+createEasterEgg();
 
+initNav();
 
-
-console.log(`Ah, you have opened the console.
-
-I too like to live dangerously.
-
-
-       *(((((((((((((((((((((((((((((((((((((((((((((((((                       
-         (((((((((((((((((((((((((((((((((((((((((((((((((/                     
-          ((((((((((((((((((((((((((((((((((((((((((((((((((                    
-           (((((       ((((((                   ((((((((     @@@@@@@@@@@@@@     
-            ((((       ((((((                     /(((((      @@@@@@@@@@@@@@@@  
-              ((       ((((((      (((((((((.      (((((       (        @@@@@@@ 
-               (       ((((((      ((((((((((       ((((       ((        @@@@@@.
-                       ((((((      (((((((((*      (((((       (((       @@@@@@ 
-                &      ((((((                    (((((((       ((((,   @@@@@@@# 
-                &@%    ((((((                    (((((((             @@@@@@@@   
-                &@@@   ((((((      (((((((((       (((((              @@@@      
-                &@@@@  ((((((      (((((((((((      ((((       (((((   @@@@     
-*@@@@@@         @@@@@@ ((((((      (((((((((((      ((((       ((((((    @@@    
-@@@@@@@       @@@@@@@ ,(((((      (((((((((        ((((       ((((((((   @@@&  
- @@@@@@@@@@@@@@@@@@&    ((((                     ((((((       (((((((((   @@@@ 
-    @@@@@@@@@@@@%        (((                  (((((((((       ((((((((((   @@@@
-                          (((((((((((((((((((((((((((((((((((((((((((((((((((  
-                           /(((((((((((((((((((((((((((((((((((((((((((((((((( 
-
-
-
-`);
-
-window.addEventListener('beforeunload', function (event) {
-  $('.loader').addClass("active");
-});
-
-window.addEventListener('DOMContentLoaded', function (event) {
-  $('.loader-2').removeClass("active");
-  $('body').addClass('content-loaded');
-});
-
+loadWipe();
+unloadWipe();

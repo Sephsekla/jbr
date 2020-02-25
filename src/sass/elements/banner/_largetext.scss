@@ -1,0 +1,23 @@
+&::before {
+    content: attr(data-title);
+    display: block;
+    color: transparent;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transform: scale(3);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    text-shadow: none;
+    background-repeat: repeat-x;
+
+
+    @media(min-width: 1024px) {
+        background-size: 35vw;
+        background-position: center 25%;
+        background-attachment: fixed;
+    }
+}
