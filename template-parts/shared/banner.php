@@ -27,7 +27,7 @@ $title = get_the_title( $id );
 <?php jbr\utilities\picture( $image_id, 'banner' ); ?>
 <div class="inner">
 <div class="container-fluid">
-<h1 style="background-image: url(<?php echo wp_get_attachment_image_url( $image_id, 'banner' ); ?>)" data-title="<?php echo $title; ?>"><span><?php echo $title; ?></span></h1>
+<h1 data-bg="url(<?php echo wp_get_attachment_image_url( $image_id, 'banner' ); ?>)" data-title="<?php echo $title; ?>"><span><?php echo $title; ?></span></h1>
 </div>
 </div>
 </section> 

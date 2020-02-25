@@ -1,29 +1,42 @@
 &::before {
 
-   
+
 
     content: attr(data-title);
     display: block;
-    color: transparent;
+
     position: absolute;
-    background: inherit;
     z-index: -1;
     transform: scale(3);
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
 
     text-shadow: none;
-    background-repeat: repeat-x;
 
-    @supports not(background-clip: text){
-        color: white;
-        opacity: 0.2;
-        background: none !important;
+    color: white;
+    opacity: 0.2;
+    background: none;
+    transition: 1s;
+
+    @supports (background-clip: text) {
+        color: transparent;
+        background: inherit;
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat-x;
+        background-image: attr(data-bg);
+        background-clip: text;
+        opacity: 0;
+
+        @supports(filter: opacity(0)) {
+            opacity: 1;
+            filter: opacity(0);
+        }
+
+
     }
 
-    
+
 
 
     @media(min-width: 1024px) {

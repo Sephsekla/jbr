@@ -23,7 +23,7 @@ $title = get_the_title( $id );
 </div>
 <div class="inner">
 <div class="container-fluid">
-<h1 style="background-image: url(<?php echo wp_get_attachment_image_url( $image_id, 'banner' ); ?>)" data-title="<?php echo $title; ?>"><span><?php echo $title; ?></span></h1>
+<h1 data-bg="<?php echo wp_get_attachment_image_url( $image_id, 'banner' ); ?>" data-title="<?php echo $title; ?>"><span><?php echo $title; ?></span></h1>
 </div>
 <div class="banner-content container">
 <?php the_content() ?>
