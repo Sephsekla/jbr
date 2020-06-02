@@ -1,0 +1,3 @@
+[submodule "submodules/prism-treeview"]
+	path = submodules/prism-treeview
+	url = git@github.com:Golmote/prism-treeview.git

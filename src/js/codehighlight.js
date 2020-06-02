@@ -1,4 +1,7 @@
 import Prism from 'prismjs';
+import 'prismjs/components/prism-git'
+require('submodules/prism-treeview/prism-treeview.js');
+
 
 
 /**
