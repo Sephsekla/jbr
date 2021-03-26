@@ -4,13 +4,11 @@ dependencies:
   flickity: 2.2.1
   gsap: 2.1.3
   he: 1.2.0
-  ifdef-loader: 2.1.5
   jquery-touchswipe: 1.6.19
   magnific-popup: 1.1.0
   normalize.css: 8.0.1
   parallax-js: 3.1.0
   prismjs: 1.20.0
-  pxloader: 1.1.2
   save: 2.4.0
   scrollmagic: 2.0.7
   typed.js: 2.0.11
@@ -25,19 +23,21 @@ devDependencies:
   css-loader: 1.0.1_webpack@4.43.0
   extract-text-webpack-plugin: 4.0.0-beta.0_webpack@4.43.0
   file-loader: 1.1.11_webpack@4.43.0
+  ifdef-loader: 2.1.5
   imports-loader: 0.7.1
   mini-css-extract-plugin: 0.4.5_webpack@4.43.0
   node-sass: 4.14.1
   optimize-css-assets-webpack-plugin: 5.0.3_webpack@4.43.0
   postcss-loader: 3.0.0
+  pxloader: 1.1.2
   sass-loader: 7.3.1_webpack@4.43.0
   style-loader: 0.21.0
   uglifyjs-webpack-plugin: 2.2.0_webpack@4.43.0
-  webpack: 4.43.0_webpack@4.43.0
+  webpack: 4.43.0
   webpack-cli: 3.3.11_webpack@4.43.0
   webpack-merge: 4.2.2
   webpack-shell-plugin: 0.5.0
-lockfileVersion: 5.1
+lockfileVersion: 5.2
 packages:
   /@types/q/1.5.4:
     dev: true
@@ -554,7 +554,7 @@ packages:
       find-cache-dir: 1.0.0
       loader-utils: 1.4.0
       mkdirp: 0.5.5
-      webpack: 4.43.0_webpack@4.43.0
+      webpack: 4.43.0
     dev: true
     engines:
       node: '>=4'
@@ -880,7 +880,7 @@ packages:
     resolution:
       integrity: sha1-o7Bz+Uq0nrb6Vc1lInozQ4BjJJc=
   /babel/6.23.0:
-    deprecated: 'In 6.x, the babel package has been deprecated in favor of babel-cli. Check https://opencollective.com/babel to support the Babel maintainers'
+    deprecated: In 6.x, the babel package has been deprecated in favor of babel-cli. Check https://opencollective.com/babel to support the Babel maintainers
     dev: true
     hasBin: true
     resolution:
@@ -919,6 +919,7 @@ packages:
     resolution:
       integrity: sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   /big.js/5.2.2:
+    dev: true
     resolution:
       integrity: sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==
   /binary-extensions/1.13.1:
@@ -1293,6 +1294,7 @@ packages:
       good-listener: 1.2.2
       select: 1.1.2
       tiny-emitter: 2.1.0
+    dev: false
     optional: true
     resolution:
       integrity: sha512-g5zbiixBRk/wyKakSwCKd7vQXDjFnAMGHoEyBogG/bw9kTD9GvdAvaoRR1ALcEzt3pVKxZR0pViekPMIS0QyGg==
@@ -1467,7 +1469,7 @@ packages:
     resolution:
       integrity: sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
   /core-js/2.6.11:
-    deprecated: 'core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.'
+    deprecated: core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.
     dev: true
     requiresBuild: true
     resolution:
@@ -1577,7 +1579,7 @@ packages:
       postcss-modules-values: 1.3.0
       postcss-value-parser: 3.3.1
       source-list-map: 2.0.1
-      webpack: 4.43.0_webpack@4.43.0
+      webpack: 4.43.0
     dev: true
     engines:
       node: '>= 6.9.0 <7.0.0 || >= 8.9.0'
@@ -1801,6 +1803,7 @@ packages:
     resolution:
       integrity: sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
   /delegate/3.2.0:
+    dev: false
     optional: true
     resolution:
       integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
@@ -1925,6 +1928,7 @@ packages:
     resolution:
       integrity: sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
   /emojis-list/3.0.0:
+    dev: true
     engines:
       node: '>= 4'
     resolution:
@@ -2148,7 +2152,7 @@ packages:
       async: 2.6.3
       loader-utils: 1.4.0
       schema-utils: 0.4.7
-      webpack: 4.43.0_webpack@4.43.0
+      webpack: 4.43.0
       webpack-sources: 1.4.3
     dev: true
     engines:
@@ -2183,7 +2187,7 @@ packages:
     dependencies:
       loader-utils: 1.4.0
       schema-utils: 0.4.7
-      webpack: 4.43.0_webpack@4.43.0
+      webpack: 4.43.0
     dev: true
     engines:
       node: '>= 4.3 < 5.0.0 || >= 5.10'
@@ -2534,6 +2538,7 @@ packages:
   /good-listener/1.2.2:
     dependencies:
       delegate: 3.2.0
+    dev: false
     optional: true
     resolution:
       integrity: sha1-1TswzfkxPf+33JoNR3CWqm0UXFA=
@@ -2732,7 +2737,7 @@ packages:
   /ifdef-loader/2.1.5:
     dependencies:
       loader-utils: 1.4.0
-    dev: false
+    dev: true
     resolution:
       integrity: sha512-GMUW5L8ZjsKRGABV3iXLdNFe2l7qFp9jeGYS55I6RNZLgQpicKxUfdH5oLDJ1cu+udb0hZiglwW6nX2kzgy86w==
   /iferr/0.1.5:
@@ -3194,6 +3199,7 @@ packages:
   /json5/1.0.1:
     dependencies:
       minimist: 1.2.5
+    dev: true
     hasBin: true
     resolution:
       integrity: sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==
@@ -3284,6 +3290,7 @@ packages:
       big.js: 5.2.2
       emojis-list: 3.0.0
       json5: 1.0.1
+    dev: true
     engines:
       node: '>=4.0.0'
     resolution:
@@ -3520,7 +3527,7 @@ packages:
     dependencies:
       loader-utils: 1.4.0
       schema-utils: 1.0.0
-      webpack: 4.43.0_webpack@4.43.0
+      webpack: 4.43.0
       webpack-sources: 1.4.3
     dev: true
     engines:
@@ -3544,6 +3551,7 @@ packages:
     resolution:
       integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
   /minimist/1.2.5:
+    dev: true
     resolution:
       integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
   /mississippi/3.0.0:
@@ -3869,7 +3877,7 @@ packages:
     dependencies:
       cssnano: 4.1.10
       last-call-webpack-plugin: 3.0.0
-      webpack: 4.43.0_webpack@4.43.0
+      webpack: 4.43.0
     dev: true
     peerDependencies:
       webpack: ^4.0.0
@@ -4536,6 +4544,7 @@ packages:
     resolution:
       integrity: sha512-a937VDHE1ftkjk+8/7nj/mrjtmkn69xxzJgRETXdAUU+IgOYPQNJF17haGWbeDxSyk++HA14UA98FurvPyBJOA==
   /prismjs/1.20.0:
+    dev: false
     optionalDependencies:
       clipboard: 2.0.6
     resolution:
@@ -4620,7 +4629,7 @@ packages:
     resolution:
       integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
   /pxloader/1.1.2:
-    dev: false
+    dev: true
     resolution:
       integrity: sha1-l7P349S+oA2/C5RQoUxUahtARLw=
   /q/1.5.1:
@@ -4870,7 +4879,7 @@ packages:
       tough-cookie: 2.5.0
       tunnel-agent: 0.6.0
       uuid: 3.4.0
-    deprecated: 'request has been deprecated, see https://github.com/request/request/issues/3142'
+    deprecated: request has been deprecated, see https://github.com/request/request/issues/3142
     dev: true
     engines:
       node: '>= 6'
@@ -4914,7 +4923,7 @@ packages:
     resolution:
       integrity: sha1-six699nWiBvItuZTM17rywoYh0g=
   /resolve-url/0.2.1:
-    deprecated: 'https://github.com/lydell/resolve-url#deprecated'
+    deprecated: https://github.com/lydell/resolve-url#deprecated
     dev: true
     resolution:
       integrity: sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
@@ -5001,7 +5010,7 @@ packages:
       neo-async: 2.6.1
       pify: 4.0.1
       semver: 6.3.0
-      webpack: 4.43.0_webpack@4.43.0
+      webpack: 4.43.0
     dev: true
     engines:
       node: '>= 6.9.0'
@@ -5055,6 +5064,7 @@ packages:
     resolution:
       integrity: sha1-jrBtualyMzOCTT9VMGQRSYR85dE=
   /select/1.1.2:
+    dev: false
     optional: true
     resolution:
       integrity: sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0=
@@ -5566,7 +5576,7 @@ packages:
       serialize-javascript: 2.1.2
       source-map: 0.6.1
       terser: 4.7.0
-      webpack: 4.43.0_webpack@4.43.0
+      webpack: 4.43.0
       webpack-sources: 1.4.3
       worker-farm: 1.7.0
     dev: true
@@ -5611,6 +5621,7 @@ packages:
     resolution:
       integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
   /tiny-emitter/2.1.0:
+    dev: false
     optional: true
     resolution:
       integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
@@ -5737,7 +5748,7 @@ packages:
       serialize-javascript: 1.9.1
       source-map: 0.6.1
       uglify-js: 3.9.4
-      webpack: 4.43.0_webpack@4.43.0
+      webpack: 4.43.0
       webpack-sources: 1.4.3
       worker-farm: 1.7.0
     dev: true
@@ -5844,7 +5855,7 @@ packages:
     resolution:
       integrity: sha512-KY9Frmirql91X2Qgjry0Wd4Y+YTdrdZheS8TFwvkbLWf/G5KNJDCh6pKL5OZctEW4+0Baa5idK2ZQuELRwPznQ==
   /urix/0.1.0:
-    deprecated: 'Please see https://github.com/lydell/urix#deprecated'
+    deprecated: Please see https://github.com/lydell/urix#deprecated
     dev: true
     resolution:
       integrity: sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
@@ -5951,7 +5962,7 @@ packages:
       loader-utils: 1.2.3
       supports-color: 6.1.0
       v8-compile-cache: 2.0.3
-      webpack: 4.43.0_webpack@4.43.0
+      webpack: 4.43.0
       yargs: 13.2.4
     dev: true
     engines:
@@ -5978,7 +5989,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-lgTS3Xhv1lCOKo7SA5TjKXMjpSM4sBjNV5+q2bqesbSPs5FjGmU6jjtBSkX9b4qW87vDIsCIlUPOEhbZrMdjeQ==
-  /webpack/4.43.0_webpack@4.43.0:
+  /webpack/4.43.0:
     dependencies:
       '@webassemblyjs/ast': 1.9.0
       '@webassemblyjs/helper-module-context': 1.9.0
@@ -6007,8 +6018,6 @@ packages:
     engines:
       node: '>=6.11.5'
     hasBin: true
-    peerDependencies:
-      webpack: '*'
     resolution:
       integrity: sha512-GW1LjnPipFW2Y78OOab8NJlCflB7EFskMih2AHdvjbpKMeDJqEgSx24cXXXiPS65+WSwVyxtDsJH6jGX2czy+g==
   /which-module/2.0.0:
