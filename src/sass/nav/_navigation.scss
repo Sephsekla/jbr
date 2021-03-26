@@ -229,8 +229,13 @@
         transition: 0.2s;
 
         .toggle-button{
-            filter: brightness(100);
+            //filter: brightness(100);
+
             transition: 0.1s;
+            span{
+                color: $jbr_white;
+                border-color: $jbr_white;
+            }
         }    
 
         &.scrolled{
