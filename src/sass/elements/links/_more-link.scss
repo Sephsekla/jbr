@@ -85,7 +85,7 @@
 
         &::before,
         &::after {
-            transform: scalex(0.6) translatey(-1px);
+            transform: scalex(0.6) translatey(-2px) translatex(3px);
         }
 
         .inner {
