@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 
@@ -24,7 +24,7 @@ module.exports = merge(common, {
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: ['babel-preset-env'],
+            presets: ["@wordpress/default"],
             sourceMap: true
 
           }

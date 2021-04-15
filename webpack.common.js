@@ -5,47 +5,39 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 const autoprefixer = require('autoprefixer');
 
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const extractSass = new ExtractTextPlugin({
-  filename: "main.min.css",
-});
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
-const extractAdmin = new ExtractTextPlugin({
-  filename: "admin.min.css",
-});
+const sassLoaders = [
+  {
+    loader: 'css-loader',
+    options: {
+      url: false,
+      sourceMap: true
 
-const extractSettings = {
-  use: [{
-      loader: "css-loader",
-      options: {
-        url: false,
-        sourceMap: true
-
-      }
+    }
     },
 
     {
-      loader: 'postcss-loader',
-      options: {
-        plugins: () => [autoprefixer({
-          'browsers': ['> 1%', 'last 2 versions']
-        })],
-        sourceMap: true
-      }
+    loader: 'postcss-loader',
+    options: {
+      postcssOptions: {
+        plugins: [autoprefixer],
+      },
+      sourceMap: true
+    }
     },
 
     {
-      loader: "sass-loader",
-      options: {
-        sourceMap: true
-      }
+    loader: "sass-loader",
+    options: {
+      sourceMap: true,
+      implementation: require("node-sass")
+    }
 
-    },
+    }
+];
 
-  ],
-  // use style-loader in development
-  fallback: "style-loader"
-}
 
 module.exports = {
 
@@ -65,11 +57,14 @@ module.exports = {
     wid: './src/wid.js',
     about: './src/about.js',
     404: './src/404.js',
+   'main.min': './src/sass/style.scss'
 
   },
   plugins: [
-    extractSass,
-    extractAdmin
+    new FixStyleOnlyEntriesPlugin(),
+    new MiniCssExtractPlugin({
+      filename: ({ chunk }) => `${chunk.name}.css`,
+    })
   ],
   output: {
     filename: '[name].js',
@@ -80,16 +75,24 @@ module.exports = {
 
   //When run in WordPress we want to use external jquery
   externals: {
-    jquery: 'jQuery'
+    jquery: 'jQuery',
+    lodash: 'lodash',
+    wp: 'wp'
   },
   module: {
-    rules: [{
+    rules: [
+      
+      /* JS Files */
+      {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: ['babel-preset-env'],
+            presets: 
+              ['@wordpress/babel-preset-default'],
+            plugins: ["lodash"],
+            sourceType: "unambiguous",
           }
         }, {
           loader: "ifdef-loader",
@@ -98,6 +101,9 @@ module.exports = {
           }
         }]
       },
+
+
+      /*Images*/
       {
         test: /\.(png|jpg|gif)$/,
         use: [{
@@ -106,29 +112,26 @@ module.exports = {
         }]
       },
 
+      /*SCSS*/
       {
         test: /\.scss$/,
-        exclude: /admin\.scss$/,
-        use: extractSass.extract(extractSettings)
+        use: [
+          MiniCssExtractPlugin.loader,
+        ].concat(sassLoaders)
       },
 
-      {
-        test: /admin\.scss$/,
-        use: extractAdmin.extract(extractSettings)
-      },
-
-
-
+      /*CSS*/
       {
         test: /\.css$/,
-        loader: 'style-loader',
-      },
-      {
-        test: /\.css$/,
-        loader: 'css-loader',
-        options: {
-          minimize: true
-        }
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: true
+            }
+          }
+        ]
       }
 
     ]
