@@ -22,27 +22,29 @@ function initHeaderScroll(){
 
                     
 }
-/*
-function popInStagger(items,trigger, duration=0, triggerPos=0.5){
-	let controller = new ScrollMagic.Controller();
 
-	let techIn = new gsap.staggerFrom(items,0.2,{
-		autoAlpha: 0,
-		scale: 2
+function popInStagger(items,trigger, duration=0, triggerPos='50%'){
+
+	const techIn = new gsap.timeline({
+		scrollTrigger: {
+			trigger: trigger,
+			once: true,
+			start: `top ${triggerPos}`,
+			markers: true,
+			end: 300,
+
+		}
 	},0.1);
 
-	let techScroll = new ScrollMagic.Scene({
-		triggerElement: trigger,
+techIn.from(items,{
+		autoAlpha: 0,
+		scale: 2,
 		duration: duration,
-		reverse: false,
-		triggerHook: triggerPos,
-	})
-	.setTween(techIn)
-	//.addIndicators()
-	.addTo(controller);
+		stagger: 0.2,
+	},0.1);
 
 }
 
-*/
 
-export { initHeaderScroll, /*popInStagger */};
+
+export { initHeaderScroll, popInStagger};

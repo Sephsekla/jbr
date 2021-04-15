@@ -6,4 +6,4 @@ import expertiseHover from './js/expertise';
 
 expertiseHover();
 
-//popInStagger('.tech-item', '#technologies', 300);
+popInStagger('.tech-item', '#technologies', 0.3);
