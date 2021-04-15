@@ -24,7 +24,7 @@ use function jbr\utilities\construct_linkbox;
 
           
 
-                    <?php construct_linkbox('',$image,$image_h,'<h3>'.get_sub_field('title').'</h3>'); ?>
+                    <?php construct_linkbox(false,$image,$image_h,'<h3>'.get_sub_field('title').'</h3>'); ?>
 
                 <span class="arrow"></span>
 

@@ -6,26 +6,24 @@ $ = jQuery;
  */
 function expertiseHover() {
 
-    $('.expertise .item').mouseenter( // On mouseenter
-        function () {
 
-            if (!$(this).find(".linkbox").hasClass("active")) { // If active nothing happens
+  $('.expertise .item').on( 'mouseenter',
 
-                $('.linkbox.active').removeClass("active"); // Deactivate active
-                $(this).find(".linkbox").addClass("active"); // Add active
-                $('.expertise-expansion').slideDown(); // Make the container visible
+    function(){
+      if (!$(this).find(".linkbox").hasClass("active")) { // If active nothing happens
 
-
-                $('#expand').text($(this).find('.slideout').text()); // Set container text
-
-            }
+        $('.linkbox.active').removeClass("active"); // Deactivate active
+        $(this).find(".linkbox").addClass("active"); // Add active
+        $('.expertise-expansion').slideDown(); // Make the container visible
 
 
+        $('#expand').text($(this).find('.slideout').text()); // Set container text
 
-        }
+      }
+    }
 
 
-    );
+  );
 
 }
 
