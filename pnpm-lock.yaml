@@ -17,6 +17,7 @@ dependencies:
   save: 2.4.0
   scrollmagic: 2.0.8
   scrollreveal: 4.0.9
+  scrollscene: 0.0.24_scrollmagic@2.0.8
   select2: 4.1.0-rc.0
   typed.js: 2.0.11
 devDependencies:
@@ -1071,7 +1072,6 @@ packages:
   /@babel/runtime/7.13.10:
     dependencies:
       regenerator-runtime: 0.13.7
-    dev: true
     resolution:
       integrity: sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
   /@babel/template/7.12.13:
@@ -6971,6 +6971,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-YfJT7rkpQB0updsdHLGWrvhBJfcfzNNawYDNIyQXJz0IViGf75O8EBPKSdvw2rF+LGCsX4FZ8tcr3b19LcZq4w==
+  /is-client/0.0.2:
+    dev: false
+    resolution:
+      integrity: sha1-cl9UksjP+lnQohSbS/6mLUN6BGI=
   /is-color-stop/1.1.0:
     dependencies:
       css-color-names: 0.0.4
@@ -8239,6 +8243,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
+  /lodash.throttle/4.1.1:
+    dev: false
+    resolution:
+      integrity: sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
   /lodash.truncate/4.4.2:
     dev: true
     resolution:
@@ -10804,7 +10812,6 @@ packages:
     resolution:
       integrity: sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
   /regenerator-runtime/0.13.7:
-    dev: true
     resolution:
       integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==
   /regenerator-transform/0.10.1:
@@ -11397,6 +11404,17 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-fefGvzVS8YbXbDK1+T0kvy2yqxaiBJZeGUhPeqajf+7sGqtX4xikbKGAlzQuPCpswAMswx94ZwhDjXKnRIqW1w==
+  /scrollscene/0.0.24_scrollmagic@2.0.8:
+    dependencies:
+      '@babel/runtime': 7.13.10
+      is-client: 0.0.2
+      lodash.throttle: 4.1.1
+      scrollmagic: 2.0.8
+    dev: false
+    peerDependencies:
+      scrollmagic: ^2.0.7
+    resolution:
+      integrity: sha512-PpePQAeQ8pz9Yg8RI9BggpDfFNjchqgO43AsWUzCpZ2XuppnO/Rkt7dY6nzshS2kn8jz5Ushpzvl7Tw3tl8UIQ==
   /scss-tokenizer/0.2.3:
     dependencies:
       js-base64: 2.5.2
@@ -13626,6 +13644,7 @@ specifiers:
   save: ^2.4.0
   scrollmagic: ^2.0.8
   scrollreveal: ^4.0.7
+  scrollscene: ^0.0.24
   select2: ^4.1.0-rc.0
   style-loader: ^2.0.0
   typed.js: ^2.0.11

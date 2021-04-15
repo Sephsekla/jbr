@@ -2,7 +2,7 @@ import homeType from './js/hometype.js';
 
 import {
     initHeaderScroll,
-    popInStagger
+    //popInStagger
 } from './js/scroll.js';
 
 $ = jQuery;

@@ -30,6 +30,7 @@
 				"save": "^2.4.0",
 				"scrollmagic": "^2.0.8",
 				"scrollreveal": "^4.0.7",
+				"scrollscene": "^0.0.24",
 				"select2": "^4.1.0-rc.0",
 				"typed.js": "^2.0.11"
 		},
