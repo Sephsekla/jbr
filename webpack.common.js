@@ -88,7 +88,7 @@ module.exports = {
       filename: ({ chunk }) => `${chunk.name}.css`,
     }),
     new CriticalCSSPlugin({
-      src: 'https://jbr.digital/',
+      src: 'https://jbr.digital/?generate-critical=true',
       target: 'dist/critical.css',
       width: 480,
       height: 800,
