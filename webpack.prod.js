@@ -1,9 +1,7 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
-//const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-//const WebpackShellPlugin = require('webpack-shell-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 
 
@@ -22,7 +20,7 @@ const TerserPlugin = require("terser-webpack-plugin");
             parallel: true,
             sourceMap: false // set to true if you want JS source maps
           }), */
-          new OptimizeCSSAssetsPlugin({}),
+          new CssMinimizerPlugin(),
           new TerserPlugin({
             test: /\.js(\?.*)?$/i,
             extractComments: true,
