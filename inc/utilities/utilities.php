@@ -9,11 +9,14 @@
  namespace jbr\utilities;
 
 function picture( $id, $size = 'thumbnail' ) {
-	$url = wp_get_attachment_image_url( $id, $size );
+	$url        = wp_get_attachment_image_url( $id, $size );
+	$srcset     = wp_get_attachment_image_srcset( $id, $size );
+	$filetype   = wp_check_filetype( $url );
+	$srcsetwebp = str_replace( $filetype['ext'], $filetype['ext'] . '.webp', $srcset );
 	?>
 <picture>
-	<source srcset="<?php echo $url; ?>.webp" type="image/webp">
-	<source srcset="<?php echo $url; ?>" type="<?php echo get_post_mime_type( $id ); ?>">
+	<source srcset="<?php echo $srcsetwebp; ?>" type="image/webp">
+	<source srcset="<?php echo $srcset; ?>" type="<?php echo get_post_mime_type( $id ); ?>">
 	<?php echo wp_get_attachment_image( $id, $size ); ?>
 </picture>
 	<?php
