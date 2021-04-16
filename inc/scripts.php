@@ -20,7 +20,7 @@ function init() {
 
 	wp_register_style( 'jbr-critical-styles', get_template_directory_uri() . '/dist/critical.css', array( /*'google-fonts'*/ ), filemtime( get_template_directory() . '/dist/critical.css' ), 'all' );
 
-	//wp_enqueue_style( 'jbr-critical-styles' );
+	wp_enqueue_style( 'jbr-critical-styles' );
 
 	wp_register_script( 'jbr-scripts', get_template_directory_uri() . '/dist/main.js', array( 'jquery' ), filemtime( get_template_directory() . '/dist/main.js' ), true );
 
