@@ -56,3 +56,7 @@ section{
     max-width: 100vw;
     overflow: hidden;
 }
+
+.treeview-part .entry-name:before{
+    filter: invert(1);
+}

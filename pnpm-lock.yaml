@@ -41,7 +41,7 @@ devDependencies:
   node-sass: 5.0.0
   normalize-path: 3.0.0
   optimize-css-assets-webpack-plugin: 5.0.4_webpack@4.43.0
-  postcss-loader: 4.2.0_postcss@8.2.10+webpack@4.43.0
+  postcss-loader: 5.2.0_postcss@8.2.10+webpack@4.43.0
   sass-loader: 10.1.1_node-sass@5.0.0+webpack@4.43.0
   style-loader: 2.0.0_webpack@4.43.0
   uglifyjs-webpack-plugin: 2.2.0_webpack@4.43.0
@@ -1652,11 +1652,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Qipn7rfTxGEDqZiezH+wxqWYR8vcXq5LRpZrETD19Gs4o8LbklbmqotSUsMU+s5G3PJwMRDfNEYoxrcBwIxOuw==
-  /@types/node/14.14.40:
+  /@types/node/14.14.41:
     dev: true
     optional: true
     resolution:
-      integrity: sha512-2HoZZGylcnz19ZSbvWhgWHqvprw1ZGHanxIrDWYykPD4CauLW4gcyLzCVfUN2kv/1t1F3CurQIdi+s1l9+XgEA==
+      integrity: sha512-dueRKfaJL4RTtSa7bWeTK1M+VH+Gns73oCgzvYfHZywRCoPSd8EkXBL0mZ9unPTveBn+D9phZBaxuzpwjWkW0g==
   /@types/normalize-package-data/2.4.0:
     dev: true
     resolution:
@@ -1748,7 +1748,7 @@ packages:
       integrity: sha512-kQ5JNTrbDv3Rp5X2n/iUu37IJBDU2gsZ5R/g1/KHOOEc5IKfUFjXT6DENPGduh08I/pamwtEq4oul7gUqKTQDQ==
   /@types/yauzl/2.9.1:
     dependencies:
-      '@types/node': 14.14.40
+      '@types/node': 14.14.41
     dev: true
     optional: true
     resolution:
@@ -9900,13 +9900,11 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-cLWoDEY5OwHcAjDnkyRQzAXfs2jrKjXpO/HQFcc5b5u/r7aa471wdmChmwfnv7x2u840iat/wi0lQ5nbRgSkUA==
-  /postcss-loader/4.2.0_postcss@8.2.10+webpack@4.43.0:
+  /postcss-loader/5.2.0_postcss@8.2.10+webpack@4.43.0:
     dependencies:
       cosmiconfig: 7.0.0
       klona: 2.0.4
-      loader-utils: 2.0.0
       postcss: 8.2.10
-      schema-utils: 3.0.0
       semver: 7.3.5
       webpack: 4.43.0
     dev: true
@@ -9914,9 +9912,9 @@ packages:
       node: '>= 10.13.0'
     peerDependencies:
       postcss: ^7.0.0 || ^8.0.1
-      webpack: ^4.0.0 || ^5.0.0
+      webpack: ^5.0.0
     resolution:
-      integrity: sha512-mqgScxHqbiz1yxbnNcPdKYo/6aVt+XExURmEbQlviFVWogDbM4AJ0A/B+ZBpYsJrTRxKw7HyRazg9x0Q9SWwLA==
+      integrity: sha512-uSuCkENFeUaOYsKrXm0eNNgVIxc71z8RcckLMbVw473rGojFnrUeqEz6zBgXsH2q1EIzXnO/4pEz9RhALjlITA==
   /postcss-media-query-parser/0.2.3:
     dev: true
     resolution:
@@ -13637,7 +13635,7 @@ specifiers:
   optimize-css-assets-webpack-plugin: ^5.0.4
   parallax-js: ^3.1.0
   postcss: ^8.2.1
-  postcss-loader: ^4.1.0
+  postcss-loader: ^5.2.0
   prismjs: ^1.22.0
   pxloader: ^1.1.2
   sass-loader: ^10.1.0

@@ -70,12 +70,12 @@ module.exports = {
 
   entry: {
 
-    main: './src/index.js',
-    post: './src/post.js',
-    home: './src/homepage.js',
-    wid: './src/wid.js',
-    about: './src/about.js',
-    404: './src/404.js',
+    'main': './src/index.js',
+    'post': './src/post.js',
+    'home': './src/homepage.js',
+    'wid': './src/wid.js',
+    'about': './src/about.js',
+    '404': './src/404.js',
    'main.min': './src/sass/style.scss'
 
   },
@@ -147,7 +147,9 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              minimize: true
+              url: false,
+              sourceMap: true
+        
             }
           }
         ]
