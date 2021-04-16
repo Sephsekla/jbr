@@ -44,7 +44,6 @@ devDependencies:
   postcss-loader: 5.2.0_postcss@8.2.10+webpack@5.33.2
   sass-loader: 11.0.1_node-sass@5.0.0+webpack@5.33.2
   style-loader: 2.0.0_webpack@5.33.2
-  uglifyjs-webpack-plugin: 2.2.0_webpack@5.33.2
   webpack: 5.33.2_webpack-cli@4.6.0
   webpack-cli: 4.6.0_webpack@5.33.2
   webpack-fix-style-only-entries: 0.6.1
@@ -11743,10 +11742,6 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha512-BsVKsiGcQMFwT8UxypobUKyv7irCNRHk1T0G680vk88yf6LBByGcZJOTJCrTP2xVN6yI+XjPJcNuE3V4fT9sAg==
-  /serialize-javascript/1.9.1:
-    dev: true
-    resolution:
-      integrity: sha512-0Vb/54WJ6k5v8sSWN09S0ora+Hnr+cX40r9F170nT+mSkaxltoE/7R3OrIdBSUv1OoiobH1QoWQbCnAO+e8J1A==
   /serialize-javascript/2.1.2:
     dev: true
     resolution:
@@ -13063,34 +13058,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==
-  /uglify-js/3.9.4:
-    dependencies:
-      commander: 2.20.3
-    dev: true
-    engines:
-      node: '>=0.8.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-8RZBJq5smLOa7KslsNsVcSH+KOXf1uDU8yqLeNuVKwmT0T3FA0ZoXlinQfRad7SDcbZZRZE4ov+2v71EnxNyCA==
-  /uglifyjs-webpack-plugin/2.2.0_webpack@5.33.2:
-    dependencies:
-      cacache: 12.0.4
-      find-cache-dir: 2.1.0
-      is-wsl: 1.1.0
-      schema-utils: 1.0.0
-      serialize-javascript: 1.9.1
-      source-map: 0.6.1
-      uglify-js: 3.9.4
-      webpack: 5.33.2_webpack-cli@4.6.0
-      webpack-sources: 1.4.3
-      worker-farm: 1.7.0
-    dev: true
-    engines:
-      node: '>= 6.9.0'
-    peerDependencies:
-      webpack: ^4.0.0
-    resolution:
-      integrity: sha512-mHSkufBmBuJ+KHQhv5H0MXijtsoA1lynJt1lXOaotja8/I0pR4L9oGaPIZw+bQBOFittXZg9OC1sXSGO9D9ZYg==
   /unbox-primitive/1.0.1:
     dependencies:
       function-bind: 1.1.1
@@ -14027,7 +13994,6 @@ specifiers:
   select2: ^4.1.0-rc.0
   style-loader: ^2.0.0
   typed.js: ^2.0.11
-  uglifyjs-webpack-plugin: ^2.2.0
   webpack: ^5.33.2
   webpack-cli: ^4.6.0
   webpack-fix-style-only-entries: ^0.6.0
