@@ -41,6 +41,6 @@ opacity: 0.4;
 
 }
 `;
-document.head.appendChild(bannerStyle);
+document.body.appendChild(bannerStyle);
 
   }

@@ -20,7 +20,7 @@ function init() {
 
 	wp_register_style( 'jbr-critical-styles', get_template_directory_uri() . '/dist/critical.css', array( /*'google-fonts'*/ ), filemtime( get_template_directory() . '/dist/critical.css' ), 'all' );
 
-	wp_enqueue_style( 'jbr-critical-styles' );
+	//wp_enqueue_style( 'jbr-critical-styles' );
 
 	wp_register_script( 'jbr-scripts', get_template_directory_uri() . '/dist/main.js', array( 'jquery' ), filemtime( get_template_directory() . '/dist/main.js' ), true );
 
@@ -74,6 +74,21 @@ add_action(
 	'wp_head',
 	function() {
 		?>
+		<style>
+			.loader-2{
+				transition: 0.6s;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #007A99;
+    z-index: 100;
+				-webkit-clip-path: polygon(-15% 0%, 0% 100%, 100% 100%, 100% 0);
+    clip-path: polygon(-15% 0%, 0% 100%, 100% 100%, 100% 0);
+			}
+		</style>
 	<noscript>
 		<style>
 			.loader, .loader-2{
