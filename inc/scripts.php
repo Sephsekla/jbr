@@ -83,7 +83,7 @@ add_action(
 add_action( 'wp_print_styles', __NAMESPACE__ . '\\deregister', 100 );
 
 function deregister() {
-	if ( true || !is_user_logged_in() ) {
+	if ( !is_user_logged_in() ) {
 		wp_deregister_style( 'dashicons' );
 		wp_deregister_style( 'admin-bar' );
 	}
