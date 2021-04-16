@@ -14,7 +14,7 @@ function init() {
 
 	wp_register_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700|Roboto+Slab:400,700&display=swap', array(), date( 'M' ), 'all' );
 
-	wp_register_style( 'jbr-styles', get_template_directory_uri() . '/dist/main.min.css', array( 'google-fonts' ), filemtime( get_template_directory() . '/dist/main.min.css' ), 'all' );
+	wp_register_style( 'jbr-styles', get_template_directory_uri() . '/dist/main.min.css', array( /*'google-fonts'*/ ), filemtime( get_template_directory() . '/dist/main.min.css' ), 'all' );
 
 	wp_enqueue_style( 'jbr-styles' );
 
@@ -29,23 +29,20 @@ function init() {
 	}
 
 	wp_register_script( 'jbr-home', get_template_directory_uri() . '/dist/home.js', array(), filemtime( get_template_directory() . '/dist/home.js' ), true );
-	
 
-	if ( is_page_template('page-templates/template-home.php') ) {
+	if ( is_page_template( 'page-templates/template-home.php' ) ) {
 		wp_enqueue_script( 'jbr-home' );
 	}
 
 	wp_register_script( 'jbr-wid', get_template_directory_uri() . '/dist/wid.js', array(), filemtime( get_template_directory() . '/dist/wid.js' ), true );
-	
 
-	if ( is_page_template('page-templates/template-wid.php') ) {
+	if ( is_page_template( 'page-templates/template-wid.php' ) ) {
 		wp_enqueue_script( 'jbr-wid' );
 	}
 
 	wp_register_script( 'jbr-about', get_template_directory_uri() . '/dist/about.js', array(), filemtime( get_template_directory() . '/dist/about.js' ), true );
-	
 
-	if ( is_page_template('page-templates/template-about.php') ) {
+	if ( is_page_template( 'page-templates/template-about.php' ) ) {
 		wp_enqueue_script( 'jbr-about' );
 	}
 
@@ -60,8 +57,18 @@ function init() {
  add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\init' );
 
 
-add_action('wp_head',function(){
-	?>
+function late_styles() {
+	wp_enqueue_style( 'google-fonts' );
+}
+
+add_action( 'get_footer', __NAMESPACE__ . '\\late_styles' );
+
+
+
+add_action(
+	'wp_head',
+	function() {
+		?>
 	<noscript>
 		<style>
 			.loader, .loader-2{
@@ -69,5 +76,6 @@ add_action('wp_head',function(){
 			}
 		</style>
 	</noscript>
-	<?php
-});
+		<?php
+	}
+);
