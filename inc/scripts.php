@@ -16,7 +16,11 @@ function init() {
 
 	wp_register_style( 'jbr-styles', get_template_directory_uri() . '/dist/main.min.css', array( /*'google-fonts'*/ ), filemtime( get_template_directory() . '/dist/main.min.css' ), 'all' );
 
-	wp_enqueue_style( 'jbr-styles' );
+	//wp_enqueue_style( 'jbr-styles' );
+
+	wp_register_style( 'jbr-critical-styles', get_template_directory_uri() . '/dist/critical.css', array( /*'google-fonts'*/ ), filemtime( get_template_directory() . '/dist/critical.css' ), 'all' );
+
+	wp_enqueue_style( 'jbr-critical-styles' );
 
 	wp_register_script( 'jbr-scripts', get_template_directory_uri() . '/dist/main.js', array( 'jquery' ), filemtime( get_template_directory() . '/dist/main.js' ), true );
 
@@ -59,6 +63,7 @@ function init() {
 
 function late_styles() {
 	wp_enqueue_style( 'google-fonts' );
+	wp_enqueue_style( 'jbr-styles' );
 }
 
 add_action( 'get_footer', __NAMESPACE__ . '\\late_styles' );

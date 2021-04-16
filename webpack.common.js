@@ -8,6 +8,9 @@ const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
+const CriticalCSSPlugin = require('critical-css-webpack-plugin');
+
+
 const sassLoaders = [
   {
     loader: 'css-loader',
@@ -83,7 +86,14 @@ module.exports = {
     new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
       filename: ({ chunk }) => `${chunk.name}.css`,
-    })
+    }),
+    new CriticalCSSPlugin({
+      src: 'https://jbr.digital/',
+      target: 'dist/critical.css',
+      width: 480,
+      height: 800,
+      minify: true,
+    }),
   ],
   output: {
     filename: '[name].js',
