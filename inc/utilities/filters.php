@@ -45,7 +45,7 @@ add_filter( 'forminator_render_button_markup', __NAMESPACE__ . '\\custom_form_su
 add_filter('wp_nav_menu_items', __NAMESPACE__.'\filter_footer', 10, 2);
 function filter_footer($items, $args){
     if( $args->theme_location == 'footer' ){
-        $items = '<li><a href="https://github.com/Sephsekla" target="_blank"><img src="' . assets\get_asset_path( 'github.svg' ) . '" alt=GitHub" width="30"/></a></li>'.$items;
+        $items = '<li><a href="https://github.com/Sephsekla" target="_blank"><img src="' . assets\get_asset_path( 'github.svg' ) . '" alt=GitHub" width=30 height=30 /></a></li>'.$items;
     }
     return $items;
 }
