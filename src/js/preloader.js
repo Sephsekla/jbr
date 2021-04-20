@@ -4,7 +4,7 @@
  */
 function loadWipe() {
 
-    window.addEventListener('DOMContentLoaded', function (event) {
+    window.addEventListener('DOMContentLoaded',(event) => {
         $('.loader-2').removeClass("active");
         $('body').addClass('content-loaded');
     });
@@ -18,7 +18,7 @@ function loadWipe() {
  */
 function unloadWipe() {
 
-    window.addEventListener('beforeunload', function (event) {
+    window.addEventListener('beforeunload', (event) => {
         $('.loader').addClass("active");
     });
 
