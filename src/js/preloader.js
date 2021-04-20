@@ -4,7 +4,7 @@
  */
 function loadWipe() {
 
-    window.addEventListener('DOMContentLoaded',(event) => {
+    $(document).ready(() => {
         $('.loader-2').removeClass("active");
         $('body').addClass('content-loaded');
     });
