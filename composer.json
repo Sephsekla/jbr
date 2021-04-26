@@ -1,13 +1,25 @@
 {
-    "name": "sephsekla/jbr",
-    "description": "Custom theme for my website",
-    "type": "theme",
-    "license": "GPL2",
-    "authors": [
-        {
-            "name": "Joe Bailey-Roberts",
-            "email": "dev@joebr.io"
-        }
-    ],
-    "require": {}
+  "name": "sephsekla/jbr",
+  "description": "A bespoke WP theme for my personal site",
+  "type": "project",
+  "license": "GPL2",
+  "authors": [{
+    "name": "Joe Bailey-Roberts",
+    "email": "dev@jbr.digital"
+  }],
+  "autoload": {
+    "psr-4": {
+      "jbr\\": "inc/classes"
+    },
+    "files": [
+      "inc/scripts.php",
+      "inc/utilities/utilities.php",
+      "inc/nav.php",
+      "inc/cpts.php"
+
+
+    ]
+  },
+  "minimum-stability": "stable",
+  "require": {}
 }
